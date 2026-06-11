@@ -604,7 +604,7 @@ export default function CompliancePage() {
             <div className="relative">
               <div className="mx-auto max-w-xl">
                 <Image
-                  src="/compliance-hero.svg"
+                  src="/a-squaredalarms/compliance-hero.svg"
                   alt="security compliance review for public premises"
                   width={1200}
                   height={960}
@@ -938,7 +938,7 @@ export default function CompliancePage() {
               </p>
               <div className="mt-8 max-w-md">
                 <Image
-                  src="/compliance-systems.svg"
+                  src="/a-squaredalarms/compliance-systems.svg"
                   alt="CCTV and access control supporting Martyn’s Law preparation"
                   width={1200}
                   height={900}
