@@ -213,7 +213,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .home-banner-track {
-    animation: none;
+    animation-duration: 120s;
   }
 }
 
