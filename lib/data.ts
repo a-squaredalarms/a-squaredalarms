@@ -97,7 +97,7 @@ export const SERVICES: Service[] = [
     description:
       'Instant on-screen emergency alerts for schools, offices, and public venues. Clear visual messaging that helps staff respond quickly during lockdowns or critical incidents.',
     icon: 'shield-alert',
-    href: '/popalert',
+    href: '/lockdown-alarms#popalert',
     primaryCTA: 'Learn More',
   },
 ]
