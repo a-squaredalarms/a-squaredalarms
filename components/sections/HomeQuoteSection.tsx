@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react'
 import {
   buildFormSubmitAutoresponse,
-  buildFormSubmitNextUrl,
   buildFormSubmitSubject,
   FORM_SUBMIT_ACTION,
   getServiceLabel,
@@ -80,14 +79,12 @@ export function HomeQuoteSection({
   const [status, setStatus] = useState<FormStatus>('idle')
   const [activeStep, setActiveStep] = useState(0)
   const [stepError, setStepError] = useState('')
-  const [nextUrl, setNextUrl] = useState(() => buildFormSubmitNextUrl('/thank-you'))
   const [currentPath, setCurrentPath] = useState(sectionId)
   const stepQuestionClass = layout === 'contact' ? STEP_QUESTION_CLASS_CONTACT : STEP_QUESTION_CLASS
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search)
     const queryService = searchParams.get('service')
-    setNextUrl(buildFormSubmitNextUrl('/thank-you', window.location.origin))
     setCurrentPath(window.location.pathname)
 
     if (
@@ -168,17 +165,17 @@ export function HomeQuoteSection({
     setActiveStep((current) => Math.max(current - 1, 0))
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
     const error = validateStep(activeStep)
     if (error) {
-      e.preventDefault()
       setStepError(error)
       return
     }
 
     const uploadError = validateQuoteEnquiry(formData)
     if (uploadError) {
-      e.preventDefault()
       setStepError(uploadError)
       setStatus('error')
       return
@@ -186,6 +183,33 @@ export function HomeQuoteSection({
 
     setStepError('')
     setStatus('submitting')
+
+    try {
+      const form = e.currentTarget
+      const data = new FormData(form)
+      data.append('_subject', buildFormSubmitSubject(formData.serviceType, formName))
+      data.append('_template', 'table')
+      data.append('_autoresponse', buildFormSubmitAutoresponse(formData.serviceType))
+      data.append('_captcha', 'false')
+
+      const res = await fetch(FORM_SUBMIT_ACTION, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+
+      const json = await res.json().catch(() => ({}))
+
+      if (res.ok && json.success === 'true') {
+        setStatus('success')
+      } else {
+        setStepError(json.message || 'Submission failed. Please call us directly.')
+        setStatus('error')
+      }
+    } catch {
+      setStepError('Could not send your enquiry. Please call us on 07778 387 989.')
+      setStatus('error')
+    }
   }
 
   function renderStepContent() {
@@ -551,9 +575,6 @@ export function HomeQuoteSection({
   const formContent = (
     <form
       onSubmit={handleSubmit}
-      action={FORM_SUBMIT_ACTION}
-      method="POST"
-      encType="multipart/form-data"
       noValidate
       className={
         isContactLayout
@@ -561,11 +582,7 @@ export function HomeQuoteSection({
           : 'grid gap-8 xl:grid-cols-[17rem_minmax(0,1fr)] xl:gap-10'
       }
     >
-      <input type="hidden" name="_next" value={nextUrl} />
-      <input type="hidden" name="_subject" value={buildFormSubmitSubject(formData.serviceType, formName)} />
-      <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_replyto" value={formData.email ?? ''} />
-      <input type="hidden" name="_autoresponse" value={buildFormSubmitAutoresponse(formData.serviceType)} />
       <input type="hidden" name="_blacklist" value="http://,https://,viagra,casino,crypto" />
       <input type="hidden" name="Form Name" value={formName} />
       <input type="hidden" name="Source Page" value={currentPath} />
