@@ -8,7 +8,7 @@ import { LockdownHardwareSection } from '@/components/sections/LockdownHardwareS
 import { PopAlertSection } from '@/components/sections/PopAlertSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 
-const WP = 'https://a-squaredalarms.com/wp-content/uploads'
+const WP = '/a-squaredalarms/images'
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
@@ -358,7 +358,7 @@ export default function LockdownAlarmsPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src={`${WP}/2025/05/slide1-top@3x.png`}
+                src={`${WP}/slide1-top@3x.png`}
                 alt="A-Squared Alarms protecting what matters"
                 width={1408}
                 height={1728}

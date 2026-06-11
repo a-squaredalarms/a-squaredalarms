@@ -52,7 +52,7 @@ const DEFAULT_STATS: HeroProps['stats'] = [
   { value: '100%', label: 'Compliance Rate' },
 ]
 
-const HERO_BRANDS = ['PopAlet', 'VapeSense', 'Alertex', 'Ajax']
+const HERO_BRANDS = ['PopAlert', 'VapeSense', 'Alertex', 'Ajax']
 
 export function Hero({
   headline,

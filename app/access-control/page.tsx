@@ -6,7 +6,7 @@ import { CTASection } from '@/components/sections/CTASection'
 import { HomeQuoteSection } from '@/components/sections/HomeQuoteSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 
-const WP = 'https://a-squaredalarms.com/wp-content/uploads'
+const WP = '/a-squaredalarms/images'
 
 const PAXTON = {
   slimReader: 'https://www.paxton-access.com/wp-content/uploads/2019/11/010-296-Paxton10-Slimline-Reader.jpg',
@@ -788,7 +788,7 @@ export default function AccessControlPage() {
 
             <div className="flex justify-center">
               <Image
-                src={`${WP}/2025/05/slide1-top@3x.png`}
+                src={`${WP}/slide1-top@3x.png`}
                 alt="A-Squared Alarms protecting what matters"
                 width={1408}
                 height={1728}

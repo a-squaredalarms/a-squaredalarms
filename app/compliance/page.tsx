@@ -7,7 +7,7 @@ const GOV_GUIDANCE_URL =
   'https://www.gov.uk/government/publications/the-terrorism-protection-of-premises-act-2025'
 const SIA_GUIDANCE_URL =
   'https://www.gov.uk/government/publications/martyns-law-the-sias-new-regulatory-role/martyns-law-the-sias-new-regulatory-role'
-const WP = 'https://a-squaredalarms.com/wp-content/uploads'
+const WP = '/a-squaredalarms/images'
 
 export const metadata: Metadata = buildMetadata({
   title: "Martyn's Law Compliance | Security Support & Site Reviews",
@@ -1075,7 +1075,7 @@ export default function CompliancePage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src={`${WP}/2025/05/slide1-top@3x.png`}
+                src={`${WP}/slide1-top@3x.png`}
                 alt="A-Squared Alarms protecting what matters"
                 width={1408}
                 height={1728}

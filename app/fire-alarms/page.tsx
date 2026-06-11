@@ -8,7 +8,7 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 
 // ─── Image base URL ───────────────────────────────────────────────────────────
 
-const WP = 'https://a-squaredalarms.com/wp-content/uploads'
+const WP = '/a-squaredalarms/images'
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
@@ -34,31 +34,31 @@ const COMPONENTS = [
     title: 'Master Sounder Beacon Callpoint',
     description:
       'The central hub of the system. Triggers the full-site alarm and coordinates all connected units across the wireless mesh network.',
-    image: `${WP}/2025/06/nexus-12-300x300.png`,
+    image: `${WP}/nexus-12-300x300.png`,
   },
   {
     title: 'Fire & First Aid Sounder Beacon',
     description:
       'IP66-rated combined sounder and beacon unit. Weatherproof for indoor and outdoor deployment with two-year battery life and multi-language announcements.',
-    image: `${WP}/2025/06/nxffa-300x300.png`,
+    image: `${WP}/nxffa-300x300.png`,
   },
   {
     title: 'Sounder Beacon',
     description:
       'Robust wireless sounder beacon that integrates into the mesh network. Delivers instant audible and visual alerts across every corner of the site.',
-    image: `${WP}/2025/06/NXISB.R-300x300.png`,
+    image: `${WP}/NXISB.R-300x300.png`,
   },
   {
     title: 'Wireless Call-Point',
     description:
       'Manual break-glass call point that wirelessly triggers the full system. No cabling required — mounts in seconds on any surface.',
-    image: `${WP}/2025/06/NXCP1.R-300x300.png`,
+    image: `${WP}/NXCP1.R-300x300.png`,
   },
   {
     title: 'Heat & Smoke Sensor',
     description:
       'Dual-technology detector suited to dusty and variable-temperature environments typical of construction sites and vacant buildings.',
-    image: `${WP}/2025/06/heat-and-smoke-300x300.png`,
+    image: `${WP}/heat-and-smoke-300x300.png`,
   },
 ]
 
@@ -66,25 +66,25 @@ const COMPONENTS = [
 
 const PROCESS_STEPS = [
   {
-    image: `${WP}/2025/06/number-1.png`,
+    image: `${WP}/number-1.png`,
     title: 'We Plan Your Coverage',
     description:
       'Our engineer assesses your site layout and identifies the key detection and alerting areas. We produce a coverage plan before a single unit goes up.',
   },
   {
-    image: `${WP}/2025/06/number-2.png`,
+    image: `${WP}/number-2.png`,
     title: 'We Install & Link the Units',
     description:
       'Battery-powered devices are installed and automatically form a wireless mesh network — no cabling, no building works, no disruption to your programme.',
   },
   {
-    image: `${WP}/2025/06/number-3.png`,
+    image: `${WP}/number-3.png`,
     title: 'The System Reacts Instantly',
     description:
       'When a detector or call point activates, all units across the site flash, sound, and announce the alert simultaneously. No zones missed.',
   },
   {
-    image: `${WP}/2025/06/number-4.png`,
+    image: `${WP}/number-4.png`,
     title: 'Always Connected',
     description:
       'The mesh network constantly self-monitors. If a unit loses connection, the system flags it immediately — keeping you covered even as the site evolves.',
@@ -239,7 +239,7 @@ export default function FireAlarmsPage() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full max-w-sm lg:max-w-md">
                 <Image
-                  src={`${WP}/2025/06/Asset-28.png`}
+                  src={`${WP}/Asset-28.png`}
                   alt="A-Squared Alarms wireless temporary fire alarm system"
                   width={600}
                   height={539}
@@ -323,7 +323,7 @@ export default function FireAlarmsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <Image
-                src={`${WP}/2025/06/check@4x.png`}
+                src={`${WP}/check@4x.png`}
                 alt="Emergency Fire & First Aid Sounder Beacon unit features"
                 width={1294}
                 height={1104}
@@ -389,7 +389,7 @@ export default function FireAlarmsPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src={`${WP}/2025/05/nxipbridge-1024x717.png`}
+                src={`${WP}/nxipbridge-1024x717.png`}
                   alt="Central control hub for temporary fire alarm monitoring"
                 width={1024}
                 height={717}
@@ -492,7 +492,7 @@ export default function FireAlarmsPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src={`${WP}/2025/05/slide1-top@3x.png`}
+                src={`${WP}/slide1-top@3x.png`}
                 alt="A-Squared Alarms protecting what matters"
                 width={1408}
                 height={1728}

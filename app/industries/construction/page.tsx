@@ -6,7 +6,7 @@ import { CTASection } from '@/components/sections/CTASection'
 import { HomeQuoteSection } from '@/components/sections/HomeQuoteSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 
-const WP = 'https://a-squaredalarms.com/wp-content/uploads'
+const WP = '/a-squaredalarms/images'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Construction Site Safety Systems | Temporary Fire Alarm & AJAX Site Security',
@@ -485,7 +485,7 @@ export default function ConstructionIndustryPage() {
 
             <div className="flex justify-center">
               <Image
-                src={`${WP}/2025/05/slide1-top@3x.png`}
+                src={`${WP}/slide1-top@3x.png`}
                 alt="A-Squared Alarms protecting what matters"
                 width={1408}
                 height={1728}
