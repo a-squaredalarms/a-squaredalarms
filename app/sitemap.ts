@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next'
 import { LOCATIONS } from '@/lib/data'
 import { BLOG_POSTS } from '@/lib/blog'
 
+export const dynamic = 'force-static'
+
 const BASE = 'https://a-squaredalarms.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
