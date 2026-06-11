@@ -1,7 +1,7 @@
 import { BRAND } from '@/lib/data'
 import type { QuoteFormData } from '@/types'
 
-export const FORM_SUBMIT_ACTION = `https://formsubmit.co/ajax/${BRAND.email}`
+export const FORM_SUBMIT_ACTION = 'https://formsubmit.co/ajax/b252edb821cc29f1c42859125f48218c'
 export const MAX_TOTAL_UPLOAD_SIZE = 10 * 1024 * 1024
 
 const SERVICE_LABELS: Record<Exclude<QuoteFormData['serviceType'], ''>, string> = {
