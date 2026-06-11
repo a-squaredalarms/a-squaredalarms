@@ -8,7 +8,7 @@ import { LockdownHardwareSection } from '@/components/sections/LockdownHardwareS
 import { PopAlertSection } from '@/components/sections/PopAlertSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 
-const WP = '/images'
+const WP = '/a-squaredalarms/images'
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 

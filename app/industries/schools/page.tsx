@@ -6,7 +6,7 @@ import { CTASection } from '@/components/sections/CTASection'
 import { HomeQuoteSection } from '@/components/sections/HomeQuoteSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 
-const WP = '/images'
+const WP = '/a-squaredalarms/images'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Schools & Colleges Safety Systems | Lockdown, Fire, Vape & Site Security',
