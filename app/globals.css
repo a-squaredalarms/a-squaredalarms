@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+
+:root {
+  /* Brand */
+  --color-navy:    #0C3057;
+  --color-sky:     #6EC1E4;
+  --color-navy-dark: #071e38;
+
+  /* Surfaces */
+  --color-surface-0: #ffffff;
+  --color-surface-1: #f8fafc;
+  --color-surface-2: #f1f5f9;
+
+  /* Alert */
+  --color-alert:   #DC2626;
+  --color-warning: #D97706;
+  --color-success: #16A34A;
+
+  /* Type */
+  --font-body: var(--font-geist-sans);
+  --font-display: var(--font-bricolage);
+
+  /* Transitions */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Layout */
+  --max-width: 104rem;
+  --gutter: clamp(1rem, 3vw, 2.5rem);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+/* ─── Fluid Container ───────────────────────────────────────────────────────── */
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full;
+    max-width: var(--max-width);
+    padding-inline: var(--gutter);
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-20 lg:py-28;
+  }
+
+  .section-spacing-sm {
+    @apply py-10 md:py-14 lg:py-18;
+  }
+}
+
+/* ─── Typography ────────────────────────────────────────────────────────────── */
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  h1 { @apply text-display-2xl; }
+  h2 { @apply text-display-xl; }
+  h3 { @apply text-display-lg; }
+  h4 { @apply text-display-md; }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+/* ─── Focus styles (WCAG 2.1 AA) ───────────────────────────────────────────── */
+
+@layer base {
+  *:focus-visible {
+    @apply outline-none ring-2 ring-sky-400 ring-offset-2 ring-offset-white;
+  }
+}
+
+/* ─── Button Components ─────────────────────────────────────────────────────── */
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-semibold 
+           transition-all duration-200 rounded-xl select-none
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-sm  { @apply btn px-4 py-2.5 text-sm; }
+  .btn-md  { @apply btn px-6 py-3 text-base; }
+  .btn-lg  { @apply btn px-8 py-4 text-lg; }
+
+  .btn-primary {
+    @apply bg-navy-800 text-white hover:bg-navy-700 active:scale-[0.98]
+           focus-visible:ring-navy-800 shadow-sm hover:shadow-md;
+  }
+
+  .btn-accent {
+    @apply bg-sky-400 text-navy-900 hover:bg-sky-300 active:scale-[0.98]
+           focus-visible:ring-sky-400 shadow-sm hover:shadow-md font-bold;
+  }
+
+  .btn-outline {
+    @apply border-2 border-navy-800 text-navy-800 hover:bg-navy-800 hover:text-white
+           active:scale-[0.98] focus-visible:ring-navy-800;
+  }
+
+  .btn-ghost {
+    @apply text-navy-800 hover:bg-navy-50 active:scale-[0.98]
+           focus-visible:ring-navy-800;
+  }
+
+  .btn-danger {
+    @apply bg-alert-red text-white hover:bg-red-700 active:scale-[0.98]
+           focus-visible:ring-red-600 shadow-sm animate-pulse-ring;
+  }
+}
+
+/* ─── Card Components ───────────────────────────────────────────────────────── */
+
+@layer components {
+  .card {
+    @apply bg-white border border-slate-200 rounded-2xl shadow-card
+           transition-shadow duration-200;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200;
+  }
+
+  .card-navy {
+    @apply bg-navy-800 text-white border border-navy-700 rounded-2xl;
+  }
+}
+
+/* ─── Form Elements ─────────────────────────────────────────────────────────── */
+
+@layer components {
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-slate-300 bg-white
+           text-slate-900 placeholder:text-slate-400 text-base
+           focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400
+           transition-colors duration-150;
+  }
+
+  .label-field {
+    @apply block text-sm font-semibold text-slate-700 mb-1.5;
+  }
+}
+
+/* ─── Badge ─────────────────────────────────────────────────────────────────── */
+
+@layer components {
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full
+           text-xs font-semibold uppercase tracking-wide;
+  }
+
+  .badge-navy    { @apply badge bg-navy-100 text-navy-800; }
+  .badge-sky     { @apply badge bg-sky-100 text-sky-800; }
+  .badge-alert   { @apply badge bg-red-100 text-red-700; }
+  .badge-success { @apply badge bg-green-100 text-green-700; }
+}
+
+/* ─── Section Dividers ──────────────────────────────────────────────────────── */
+
+.section-wave {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.section-wave-reverse {
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ─── Animations ────────────────────────────────────────────────────────────── */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes home-banner-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.home-banner-track {
+  animation: home-banner-marquee 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-banner-track {
+    animation: none;
+  }
+}
+
+/* ─── Compliance Banner ─────────────────────────────────────────────────────── */
+
+.compliance-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-navy),
+    var(--color-navy) 10px,
+    #0a2844 10px,
+    #0a2844 20px
+  );
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #0C3057; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2a5280; }
