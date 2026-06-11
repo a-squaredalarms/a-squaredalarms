@@ -8,7 +8,7 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 
 // ─── Image base URL ───────────────────────────────────────────────────────────
 
-const WP = '/a-squaredalarms/images'
+const WP = '/images'
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 

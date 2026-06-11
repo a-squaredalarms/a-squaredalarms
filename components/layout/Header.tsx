@@ -359,7 +359,7 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0" aria-label="A-Squared Alarms — Home">
               <Image
-                src="/a-squaredalarms/logo-dark.webp"
+                src="/logo-dark.webp"
                 alt="A-Squared Alarms"
                 width={160}
                 height={48}

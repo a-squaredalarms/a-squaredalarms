@@ -75,7 +75,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-5">
             <Link href="/" className="flex items-center" aria-label="A-Squared Alarms">
               <Image
-                src="/a-squaredalarms/logo-white.webp"
+                src="/logo-white.webp"
                 alt="A-Squared Alarms"
                 width={160}
                 height={48}

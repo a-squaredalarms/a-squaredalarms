@@ -6,7 +6,7 @@ import { CTASection } from '@/components/sections/CTASection'
 import { HomeQuoteSection } from '@/components/sections/HomeQuoteSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 
-const WP = '/a-squaredalarms/images'
+const WP = '/images'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Construction Site Safety Systems | Temporary Fire Alarm & AJAX Site Security',

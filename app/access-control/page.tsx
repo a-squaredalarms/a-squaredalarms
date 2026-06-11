@@ -6,7 +6,7 @@ import { CTASection } from '@/components/sections/CTASection'
 import { HomeQuoteSection } from '@/components/sections/HomeQuoteSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 
-const WP = '/a-squaredalarms/images'
+const WP = '/images'
 
 const PAXTON = {
   slimReader: 'https://www.paxton-access.com/wp-content/uploads/2019/11/010-296-Paxton10-Slimline-Reader.jpg',
