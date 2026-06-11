@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react'
 import {
   buildFormSubmitAutoresponse,
-  buildFormSubmitNextUrl,
   buildFormSubmitSubject,
   FORM_SUBMIT_ACTION,
   validateQuoteEnquiry,
@@ -87,13 +86,11 @@ export function QuoteForm() {
   const [formData, setFormData] = useState<QuoteFormData>(createInitialFormData)
   const [status, setStatus] = useState<FormStatus>('idle')
   const [errorMessage, setErrorMessage] = useState('')
-  const [nextUrl, setNextUrl] = useState(() => buildFormSubmitNextUrl('/thank-you'))
   const [currentPath, setCurrentPath] = useState('/locations')
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search)
     const queryService = searchParams.get('service')
-    setNextUrl(buildFormSubmitNextUrl('/thank-you', window.location.origin))
     setCurrentPath(window.location.pathname)
 
     if (
@@ -119,26 +116,48 @@ export function QuoteForm() {
     updateField('photos', Array.from(e.target.files ?? []))
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    const contactError = validateContactDetails(formData)
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
 
+    const contactError = validateContactDetails(formData)
     if (contactError) {
-      e.preventDefault()
       setErrorMessage(contactError)
       setStatus('error')
       return
     }
 
     const uploadError = validateQuoteEnquiry(formData)
-
     if (uploadError) {
-      e.preventDefault()
       setErrorMessage(uploadError)
       setStatus('error')
       return
     }
 
     setStatus('submitting')
+
+    try {
+      const form = e.currentTarget
+      const data = new FormData(form)
+      data.append('_subject', buildFormSubmitSubject(formData.serviceType, 'Quote Form'))
+      data.append('_template', 'table')
+      data.append('_autoresponse', buildFormSubmitAutoresponse(formData.serviceType))
+      data.append('_captcha', 'false')
+
+      const res = await fetch(FORM_SUBMIT_ACTION, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+
+      if (res.ok) {
+        setStatus('success')
+      } else {
+        throw new Error('Submit failed')
+      }
+    } catch {
+      setErrorMessage('')
+      setStatus('error')
+    }
   }
 
   if (status === 'success') {
@@ -176,11 +195,7 @@ export function QuoteForm() {
       aria-label="Request a quote"
       noValidate
     >
-      <input type="hidden" name="_next" value={nextUrl} />
-      <input type="hidden" name="_subject" value={buildFormSubmitSubject(formData.serviceType, 'Location Page Quote Form')} />
-      <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_replyto" value={formData.email ?? ''} />
-      <input type="hidden" name="_autoresponse" value={buildFormSubmitAutoresponse(formData.serviceType)} />
       <input type="hidden" name="_blacklist" value="http://,https://,viagra,casino,crypto" />
       <input type="hidden" name="Form Name" value="Location Page Quote Form" />
       <input type="hidden" name="Source Page" value={currentPath} />
