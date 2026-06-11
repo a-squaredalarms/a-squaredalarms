@@ -11,10 +11,6 @@ export default function ThankYouPage() {
   return (
     <section className="relative overflow-hidden bg-navy-900 py-24 text-white md:py-32">
       <div
-        className="absolute inset-0 bg-[url('/images/hero-grid.svg')] bg-cover bg-center opacity-15"
-        aria-hidden="true"
-      />
-      <div
         className="absolute right-[-12rem] top-[-10rem] h-[26rem] w-[26rem] rounded-full bg-sky-400/20 blur-3xl"
         aria-hidden="true"
       />

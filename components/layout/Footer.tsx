@@ -14,7 +14,6 @@ const FOOTER_LINKS = {
   industries: INDUSTRIES.slice(0, 4).map((i) => ({ label: i.title, href: i.href })),
   company: [
     { label: 'Compliance & Martyn\'s Law', href: '/compliance' },
-    { label: 'Case Studies', href: '/case-studies' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },
   ],
