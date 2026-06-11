@@ -149,13 +149,16 @@ export function QuoteForm() {
         headers: { Accept: 'application/json' },
       })
 
-      if (res.ok) {
+      const json = await res.json().catch(() => ({}))
+
+      if (res.ok && json.success === 'true') {
         setStatus('success')
       } else {
-        throw new Error('Submit failed')
+        setErrorMessage(json.message || 'Submission failed. Please call us directly.')
+        setStatus('error')
       }
-    } catch {
-      setErrorMessage('')
+    } catch (err) {
+      setErrorMessage('Could not send your enquiry. Please call us on 07778 387 989.')
       setStatus('error')
     }
   }
