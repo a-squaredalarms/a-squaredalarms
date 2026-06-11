@@ -191,9 +191,6 @@ export function QuoteForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      action={FORM_SUBMIT_ACTION}
-      method="POST"
-      encType="multipart/form-data"
       className="space-y-6"
       aria-label="Request a quote"
       noValidate
