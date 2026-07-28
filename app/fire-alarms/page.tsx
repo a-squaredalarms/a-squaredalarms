@@ -5,6 +5,7 @@ import { buildMetadata, buildServiceSchema, buildFAQSchema } from '@/lib/seo'
 import { CTASection } from '@/components/sections/CTASection'
 import { HomeQuoteSection } from '@/components/sections/HomeQuoteSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
+import { RelatedArticles } from '@/components/sections/RelatedArticles'
 
 // ─── Image base URL ───────────────────────────────────────────────────────────
 
@@ -512,6 +513,15 @@ export default function FireAlarmsPage() {
         primaryCTA={{ label: 'Get an Online Quote', href: '#survey' }}
         secondaryCTA={{ label: 'Call Us Now', phone: true }}
         urgencyLead="Rapid deployment for temporary site protection"
+      />
+      <RelatedArticles
+        slugs={[
+          'install-lockdown-alarm-without-closing-your-site',
+          'when-to-install-school-safety-systems',
+          'lockdown-alarm-vs-fire-alarm',
+        ]}
+        heading="Planning a temporary fire alarm installation"
+        subheading="Practical guidance on installing around occupied buildings, term dates and live site works."
       />
     </>
   )

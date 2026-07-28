@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata } from '@/lib/seo'
+import { RelatedArticles } from '@/components/sections/RelatedArticles'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Vape Detection Systems',
@@ -15,6 +16,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function VapeDetectionPage() {
   return (
+    <>
     <section className="section-spacing bg-white" aria-labelledby="coming-soon-heading">
       <div className="container-site">
         <div className="mx-auto max-w-3xl rounded-[2rem] border border-slate-200 bg-slate-50 px-8 py-20 text-center shadow-card md:px-12">
@@ -31,5 +33,15 @@ export default function VapeDetectionPage() {
         </div>
       </div>
     </section>
+      <RelatedArticles
+        slugs={[
+          'how-to-run-a-school-lockdown-drill',
+          'martyns-law-for-schools-checklist',
+          'when-to-install-school-safety-systems',
+        ]}
+        heading="More guidance for school sites"
+        subheading="Vape detection usually sits alongside wider safeguarding and site safety work. These guides cover the rest."
+      />
+    </>
   )
 }

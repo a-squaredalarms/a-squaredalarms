@@ -4,7 +4,7 @@ import { GeistMono } from 'geist/font/mono'
 import { Bricolage_Grotesque } from 'next/font/google'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import { buildLocalBusinessSchema } from '@/lib/seo'
+import { buildLocalBusinessSchema, buildOrganizationSchema } from '@/lib/seo'
 import './globals.css'
 
 const bricolage = Bricolage_Grotesque({
@@ -71,6 +71,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: structuredData }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: buildOrganizationSchema() }}
         />
       </head>
       <body className="min-h-screen bg-white text-slate-900 antialiased">

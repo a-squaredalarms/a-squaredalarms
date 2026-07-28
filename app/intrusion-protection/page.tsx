@@ -5,6 +5,7 @@ import { buildMetadata, buildServiceSchema, buildFAQSchema } from '@/lib/seo'
 import { CTASection } from '@/components/sections/CTASection'
 import { HomeQuoteSection } from '@/components/sections/HomeQuoteSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
+import { RelatedArticles } from '@/components/sections/RelatedArticles'
 
 const WP = '/images'
 
@@ -444,6 +445,15 @@ export default function IntrusionProtectionPage() {
         primaryCTA={{ label: 'Book a Free Site Survey', href: '/contact?service=intrusion-protection' }}
         secondaryCTA={{ label: 'Call Us', phone: true }}
         note="Wireless retrofit options available for occupied buildings and phased upgrades."
+      />
+      <RelatedArticles
+        slugs={[
+          'install-lockdown-alarm-without-closing-your-site',
+          'how-much-does-a-lockdown-alarm-system-cost',
+          'when-to-install-school-safety-systems',
+        ]}
+        heading="Planning your site security"
+        subheading="Out-of-hours protection is usually one part of a wider site plan. These guides cover the practical decisions."
       />
     </>
   )

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { buildMetadata, buildServiceSchema, buildFAQSchema } from '@/lib/seo'
+import { RelatedArticles } from '@/components/sections/RelatedArticles'
 
 const GOV_GUIDANCE_URL =
   'https://www.gov.uk/government/publications/the-terrorism-protection-of-premises-act-2025'
@@ -1165,6 +1166,15 @@ export default function CompliancePage() {
           </div>
         </div>
       </section>
+      <RelatedArticles
+        slugs={[
+          'martyns-law-lockdown-requirements',
+          'martyns-law-for-schools-checklist',
+          'lockdown-procedure-risk-assessment',
+        ]}
+        heading="Martyn’s Law guidance in depth"
+        subheading="Full articles on what the legislation asks for, what it means for schools, and how to turn a risk assessment into a procedure staff can follow."
+      />
     </>
   )
 }

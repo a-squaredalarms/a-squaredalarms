@@ -5,6 +5,7 @@ import { buildMetadata, buildServiceSchema, buildFAQSchema } from '@/lib/seo'
 import { CTASection } from '@/components/sections/CTASection'
 import { HomeQuoteSection } from '@/components/sections/HomeQuoteSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
+import { RelatedArticles } from '@/components/sections/RelatedArticles'
 
 const WP = '/images'
 
@@ -808,6 +809,15 @@ export default function AccessControlPage() {
         primaryCTA={{ label: 'Request a Quote', href: '#survey' }}
         secondaryCTA={{ label: 'Arrange a Site Survey', href: '/contact?service=access-control' }}
         urgencyLead="Professional Paxton installation for controlled entry"
+      />
+      <RelatedArticles
+        slugs={[
+          'who-can-trigger-a-lockdown-alarm',
+          'how-much-does-a-lockdown-alarm-system-cost',
+          'lockdown-procedure-risk-assessment',
+        ]}
+        heading="Access control and lockdown planning"
+        subheading="Entrance control works best alongside a clear alerting procedure. These guides cover how the two fit together."
       />
     </>
   )
