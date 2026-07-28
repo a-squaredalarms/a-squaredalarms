@@ -506,14 +506,6 @@ export default function FireAlarmsPage() {
 
       <HomeQuoteSection sectionId="survey" />
 
-      <CTASection
-        variant="urgent"
-        headline="Your Site Needs Fire Detection From Day One."
-        subheading="Whether you're breaking ground tomorrow or managing a vacant property today — we can have a system live within hours. Free site assessment, no obligation."
-        primaryCTA={{ label: 'Get an Online Quote', href: '#survey' }}
-        secondaryCTA={{ label: 'Call Us Now', phone: true }}
-        urgencyLead="Rapid deployment for temporary site protection"
-      />
       <RelatedArticles
         slugs={[
           'install-lockdown-alarm-without-closing-your-site',
@@ -522,6 +514,14 @@ export default function FireAlarmsPage() {
         ]}
         heading="Planning a temporary fire alarm installation"
         subheading="Practical guidance on installing around occupied buildings, term dates and live site works."
+      />
+      <CTASection
+        variant="urgent"
+        headline="Your Site Needs Fire Detection From Day One."
+        subheading="Whether you're breaking ground tomorrow or managing a vacant property today — we can have a system live within hours. Free site assessment, no obligation."
+        primaryCTA={{ label: 'Get an Online Quote', href: '#survey' }}
+        secondaryCTA={{ label: 'Call Us Now', phone: true }}
+        urgencyLead="Rapid deployment for temporary site protection"
       />
     </>
   )

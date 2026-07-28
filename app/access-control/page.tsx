@@ -802,14 +802,6 @@ export default function AccessControlPage() {
 
       <HomeQuoteSection sectionId="survey" />
 
-      <CTASection
-        variant="urgent"
-        headline="Need a professionally installed Paxton access control system?"
-        subheading="We survey the site, specify the right Paxton products, install the hardware, configure the permissions, and support the system after handover."
-        primaryCTA={{ label: 'Request a Quote', href: '#survey' }}
-        secondaryCTA={{ label: 'Arrange a Site Survey', href: '/contact?service=access-control' }}
-        urgencyLead="Professional Paxton installation for controlled entry"
-      />
       <RelatedArticles
         slugs={[
           'who-can-trigger-a-lockdown-alarm',
@@ -818,6 +810,14 @@ export default function AccessControlPage() {
         ]}
         heading="Access control and lockdown planning"
         subheading="Entrance control works best alongside a clear alerting procedure. These guides cover how the two fit together."
+      />
+      <CTASection
+        variant="urgent"
+        headline="Need a professionally installed Paxton access control system?"
+        subheading="We survey the site, specify the right Paxton products, install the hardware, configure the permissions, and support the system after handover."
+        primaryCTA={{ label: 'Request a Quote', href: '#survey' }}
+        secondaryCTA={{ label: 'Arrange a Site Survey', href: '/contact?service=access-control' }}
+        urgencyLead="Professional Paxton installation for controlled entry"
       />
     </>
   )

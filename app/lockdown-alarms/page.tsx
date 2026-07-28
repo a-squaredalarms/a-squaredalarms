@@ -372,13 +372,6 @@ export default function LockdownAlarmsPage() {
 
       <HomeQuoteSection sectionId="survey" />
 
-      <CTASection
-        variant="urgent"
-        headline="Your Lockdown System Should Be Operational Before the Next Incident."
-        subheading="Most of our clients book a survey within 48 hours of first contact. The process is fast, transparent, and fully compliant."
-        primaryCTA={{ label: 'Book a Free Survey', href: '#survey' }}
-        secondaryCTA={{ label: 'Call Us Now', phone: true }}
-      />
       <RelatedArticles
         slugs={[
           'how-much-does-a-lockdown-alarm-system-cost',
@@ -387,6 +380,13 @@ export default function LockdownAlarmsPage() {
         ]}
         heading="Read this before you buy a lockdown system"
         subheading="The questions sites ask us most often, answered in full. No sales pitch, just what actually decides the specification."
+      />
+      <CTASection
+        variant="urgent"
+        headline="Your Lockdown System Should Be Operational Before the Next Incident."
+        subheading="Most of our clients book a survey within 48 hours of first contact. The process is fast, transparent, and fully compliant."
+        primaryCTA={{ label: 'Book a Free Survey', href: '#survey' }}
+        secondaryCTA={{ label: 'Call Us Now', phone: true }}
       />
     </>
   )

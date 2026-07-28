@@ -438,14 +438,6 @@ export default function IntrusionProtectionPage() {
 
       <HomeQuoteSection sectionId="survey" />
 
-      <CTASection
-        variant="navy"
-        headline="Need a stronger after-hours security response?"
-        subheading="We install intrusion protection that gives your staff and keyholders clearer visibility, faster alerts, and easier control across the whole site."
-        primaryCTA={{ label: 'Book a Free Site Survey', href: '/contact?service=intrusion-protection' }}
-        secondaryCTA={{ label: 'Call Us', phone: true }}
-        note="Wireless retrofit options available for occupied buildings and phased upgrades."
-      />
       <RelatedArticles
         slugs={[
           'install-lockdown-alarm-without-closing-your-site',
@@ -454,6 +446,14 @@ export default function IntrusionProtectionPage() {
         ]}
         heading="Planning your site security"
         subheading="Out-of-hours protection is usually one part of a wider site plan. These guides cover the practical decisions."
+      />
+      <CTASection
+        variant="navy"
+        headline="Need a stronger after-hours security response?"
+        subheading="We install intrusion protection that gives your staff and keyholders clearer visibility, faster alerts, and easier control across the whole site."
+        primaryCTA={{ label: 'Book a Free Site Survey', href: '/contact?service=intrusion-protection' }}
+        secondaryCTA={{ label: 'Call Us', phone: true }}
+        note="Wireless retrofit options available for occupied buildings and phased upgrades."
       />
     </>
   )
