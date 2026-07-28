@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BrochureDownload } from '@/components/sections/BrochureDownload'
 
 const HARDWARE_FEATURES = [
   'Distinct tone from fire alarms',
@@ -118,7 +119,7 @@ export function LockdownHardwareSection() {
                 ))}
               </div>
 
-              <div className="pt-2">
+              <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:flex-wrap sm:items-center">
                 <Link
                   href="https://alertex.co.uk/"
                   target="_blank"
@@ -130,6 +131,19 @@ export function LockdownHardwareSection() {
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </Link>
+                <a
+                  href="#brochure"
+                  className="inline-flex items-center justify-center gap-3 rounded-xl border-2 border-navy-900 bg-white px-8 py-4 text-lg font-bold text-navy-900 transition-all duration-200 hover:bg-navy-900 hover:text-white"
+                >
+                  Download Brochure
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                    <path d="M12 3v12M7 12l5 5 5-5M4 21h16" />
+                  </svg>
+                </a>
+              </div>
+
+              <div id="brochure" className="scroll-mt-28 pt-4">
+                <BrochureDownload />
               </div>
             </div>
           </div>
