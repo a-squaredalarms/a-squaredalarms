@@ -22,10 +22,12 @@ export function buildMetadata({
   keywords?: string[]
   noIndex?: boolean
 }): Metadata {
-  const fullTitle = `${title} | A-Squared Alarms — UK Safety Systems`
+  const fullTitle = `${title} | A-Squared Alarms`
 
   return {
-    title: fullTitle,
+    // `absolute` opts out of the root layout's title template. Without it the
+    // template appends the brand a second time on every nested route.
+    title: { absolute: fullTitle },
     description,
     keywords: [
       ...keywords,
@@ -153,6 +155,69 @@ export function buildLocationSchema(location: LocationPage): string {
       latitude: location.coordinates.lat,
       longitude: location.coordinates.lng,
     },
+  })
+}
+
+/**
+ * Organisation-level identity. Emitted once, in the root layout, so search
+ * engines can associate the brand, logo and contact details with the domain.
+ */
+export function buildOrganizationSchema(): string {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${BASE_URL}/#organization`,
+    name: BRAND.name,
+    legalName: 'A-Squared (A2) Ltd',
+    url: BASE_URL,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${BASE_URL}/logo-dark.webp`,
+    },
+    description:
+      "UK specialists in Martyn's Law-aligned lockdown alarm systems, temporary fire alarms, vape detection, access control and intrusion protection.",
+    telephone: BRAND.phone,
+    email: BRAND.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: BRAND.address.line1,
+      addressLocality: BRAND.address.city,
+      postalCode: BRAND.address.postcode,
+      addressCountry: 'GB',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: BRAND.phone,
+      email: BRAND.email,
+      contactType: 'sales',
+      areaServed: 'GB',
+      availableLanguage: 'English',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'United Kingdom',
+    },
+  })
+}
+
+/**
+ * Breadcrumb trail for a page. Pass the crumbs in order, excluding Home, which
+ * is added automatically as the first item.
+ */
+export function buildBreadcrumbSchema(
+  crumbs: Array<{ name: string; path: string }>,
+): string {
+  const items = [{ name: 'Home', path: '/' }, ...crumbs]
+
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.name,
+      item: `${BASE_URL}${crumb.path === '/' ? '' : crumb.path}`,
+    })),
   })
 }
 
