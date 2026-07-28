@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { BRAND, SERVICES, INDUSTRIES } from '@/lib/data'
+import { BRAND, SERVICES, INDUSTRIES, LOCATIONS } from '@/lib/data'
 
 const FOOTER_LINKS = {
   services: SERVICES
@@ -14,9 +14,11 @@ const FOOTER_LINKS = {
   industries: INDUSTRIES.slice(0, 4).map((i) => ({ label: i.title, href: i.href })),
   company: [
     { label: 'Compliance & Martyn\'s Law', href: '/compliance' },
+    { label: 'Case Studies', href: '/case-studies' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },
   ],
+  locations: LOCATIONS.map((l) => ({ label: l.city, href: `/locations/${l.slug}` })),
   legal: [
     { label: 'Privacy Policy', href: '/privacy-policy' },
     { label: 'Terms & Conditions', href: '/terms' },
@@ -162,6 +164,22 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* Areas we cover */}
+        <div className="mt-10 border-t border-navy-800 pt-8">
+          <h3 className="text-white font-semibold text-sm mb-4">Areas We Cover</h3>
+          <div className="flex flex-wrap gap-x-5 gap-y-2.5">
+            {FOOTER_LINKS.locations.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
