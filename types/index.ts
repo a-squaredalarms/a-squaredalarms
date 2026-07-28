@@ -45,6 +45,12 @@ export interface Industry {
 
 // ─── Location Types ───────────────────────────────────────────────────────────
 
+export interface LocationSection {
+  heading: string
+  paragraphs: string[]
+  bullets?: string[]
+}
+
 export interface LocationPage {
   city: string
   slug: string
@@ -55,6 +61,18 @@ export interface LocationPage {
     lng: number
   }
   nearbyAreas?: string[]
+  /** 'city' for major-city pages, 'county' for wider county coverage pages. */
+  areaType?: 'city' | 'county'
+  /** Unique opening paragraph. Keeps each page genuinely distinct. */
+  intro?: string
+  /** Area-specific body content. This is what stops pages being near-duplicates. */
+  localContext?: LocationSection[]
+  /** Building and site types typical of this area. */
+  siteTypes?: string[]
+  /** Local authorities covered, used for genuine local relevance. */
+  authorities?: string[]
+  /** Rendered as an accordion and emitted as FAQPage structured data. */
+  faqs?: BlogFAQ[]
 }
 
 // ─── CTA Types ────────────────────────────────────────────────────────────────
@@ -161,6 +179,23 @@ export interface TrustBadge {
 export interface BlogSection {
   heading: string
   paragraphs: string[]
+  /** Scannable points rendered as a checked list under the paragraphs. */
+  bullets?: string[]
+}
+
+export interface BlogFAQ {
+  question: string
+  answer: string
+}
+
+/**
+ * Side-by-side comparison rendered as a table. `columns` are the header cells
+ * after the first (label) column, so each row's `cells` must match its length.
+ */
+export interface BlogComparison {
+  title: string
+  columns: string[]
+  rows: Array<{ label: string; cells: string[] }>
 }
 
 export interface BlogPost {
@@ -181,6 +216,35 @@ export interface BlogPost {
   serviceLabel: string
   keyTakeaways: string[]
   sections: BlogSection[]
+  /** Short scannable summary shown above the article body. */
+  atAGlance?: string[]
+  /** Rendered as an accordion and emitted as FAQPage structured data. */
+  faqs?: BlogFAQ[]
+  comparison?: BlogComparison
+  /** Renders the playable 32-tone sounder library after the article sections. */
+  soundLibrary?: boolean
+}
+
+// ─── Case Study Types ─────────────────────────────────────────────────────────
+
+/**
+ * A case study published by the system manufacturer (Luminite / Alertex).
+ * These are not A-Squared installations — every entry links out to the
+ * manufacturer's own write-up via `sourceUrl`.
+ */
+export interface CaseStudy {
+  id: string
+  organisation: string
+  sector: string
+  location: string
+  publishedAt: string
+  displayDate: string
+  excerpt: string
+  system: string
+  scale: string
+  highlights: string[]
+  sourceUrl: string
+  featured?: boolean
 }
 
 // ─── Compliance Types ─────────────────────────────────────────────────────────
