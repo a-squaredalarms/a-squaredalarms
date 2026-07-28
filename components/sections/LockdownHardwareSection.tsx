@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { BrochureDownload } from '@/components/sections/BrochureDownload'
 
 const HARDWARE_FEATURES = [
@@ -119,32 +118,7 @@ export function LockdownHardwareSection() {
                 ))}
               </div>
 
-              <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:flex-wrap sm:items-center">
-                <Link
-                  href="https://alertex.co.uk/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-3 rounded-xl bg-sky-400 px-8 py-4 text-lg font-bold text-navy-900 shadow-[0_14px_30px_rgba(110,193,228,0.28)] transition-all duration-200 hover:bg-sky-300 hover:shadow-[0_18px_36px_rgba(110,193,228,0.34)]"
-                >
-                  Explore the System
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </Link>
-                <a
-                  href="#brochure"
-                  className="inline-flex items-center justify-center gap-3 rounded-xl border-2 border-navy-900 bg-white px-8 py-4 text-lg font-bold text-navy-900 transition-all duration-200 hover:bg-navy-900 hover:text-white"
-                >
-                  Download Brochure
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                    <path d="M12 3v12M7 12l5 5 5-5M4 21h16" />
-                  </svg>
-                </a>
-              </div>
-
-              <div id="brochure" className="scroll-mt-28 pt-4">
-                <BrochureDownload />
-              </div>
+              <BrochureDownload exploreHref="https://alertex.co.uk/" />
             </div>
           </div>
         </div>

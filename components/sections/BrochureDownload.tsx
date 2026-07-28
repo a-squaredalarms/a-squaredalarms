@@ -12,7 +12,8 @@ const BROCHURE_PATH = '/downloads/a-squared-lockdown-alarm-brochure.pdf'
  * the direct link stays visible, so a delivery failure never costs the user the
  * document they asked for.
  */
-export function BrochureDownload({ className = '' }: { className?: string }) {
+export function BrochureDownload({ exploreHref }: { exploreHref: string }) {
+  const [open, setOpen] = useState(false)
   const [email, setEmail] = useState('')
   const [organisation, setOrganisation] = useState('')
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -85,13 +86,51 @@ export function BrochureDownload({ className = '' }: { className?: string }) {
     }
   }
 
+  const TriggerRow = (
+    <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:flex-wrap sm:items-center">
+      <a
+        href={exploreHref}
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center justify-center gap-3 rounded-xl bg-sky-400 px-8 py-4 text-lg font-bold text-navy-900 shadow-[0_14px_30px_rgba(110,193,228,0.28)] transition-all duration-200 hover:bg-sky-300 hover:shadow-[0_18px_36px_rgba(110,193,228,0.34)]"
+      >
+        Explore the System
+        <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+      <button
+        type="button"
+        onClick={() => setOpen((prev) => !prev)}
+        aria-expanded={open}
+        aria-controls="brochure-panel"
+        className="inline-flex items-center justify-center gap-3 rounded-xl border-2 border-navy-900 bg-white px-8 py-4 text-lg font-bold text-navy-900 transition-all duration-200 hover:bg-navy-900 hover:text-white"
+      >
+        Download Brochure
+        <svg
+          className={`h-5 w-5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          aria-hidden="true"
+        >
+          <path d="M12 3v12M7 12l5 5 5-5M4 21h16" />
+        </svg>
+      </button>
+    </div>
+  )
+
   if (status === 'success') {
     return (
-      <div
-        className={`rounded-[1.5rem] border-2 border-green-200 bg-green-50 p-6 ${className}`}
-        role="status"
-        aria-live="polite"
-      >
+      <>
+        {TriggerRow}
+        <div
+          id="brochure-panel"
+          className="mt-4 rounded-[1.5rem] border-2 border-green-200 bg-green-50 p-6"
+          role="status"
+          aria-live="polite"
+        >
         <div className="flex items-start gap-4">
           <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-green-100">
             <svg
@@ -120,14 +159,21 @@ export function BrochureDownload({ className = '' }: { className?: string }) {
             >
               Download the Brochure
             </a>
+            </div>
           </div>
         </div>
-      </div>
+      </>
     )
   }
 
   return (
-    <div className={`rounded-[1.5rem] border-2 border-slate-200 bg-white p-6 shadow-card ${className}`}>
+    <>
+      {TriggerRow}
+      {!open ? null : (
+      <div
+        id="brochure-panel"
+        className="mt-4 rounded-[1.5rem] border-2 border-slate-200 bg-white p-6 shadow-card"
+      >
       <div className="flex items-start gap-4">
         <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-navy-50 text-navy-800">
           <svg
@@ -222,6 +268,8 @@ export function BrochureDownload({ className = '' }: { className?: string }) {
           .
         </p>
       </form>
-    </div>
+      </div>
+      )}
+    </>
   )
 }
