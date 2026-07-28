@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema } from '@/lib/seo'
 import { BLOG_POSTS, getBlogPostBySlug, getRelatedBlogPosts } from '@/lib/blog'
 import { CTASection } from '@/components/sections/CTASection'
+import { SoundLibrary } from '@/components/sections/SoundLibrary'
 import type { BlogPost } from '@/types'
 
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
@@ -91,6 +92,22 @@ export default async function BlogPostPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: articleSchema }} />
+      {post.faqs && post.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: buildFAQSchema(post.faqs) }}
+        />
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: buildBreadcrumbSchema([
+            { name: 'Blog', path: '/blog' },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+        }}
+      />
+
 
       <section className="relative overflow-hidden bg-navy-900" aria-label="Blog article hero">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(110,193,228,0.18),transparent_48%)]" aria-hidden="true" />
@@ -161,6 +178,43 @@ export default async function BlogPostPage({
                 </p>
               </div>
 
+              {post.atAGlance && post.atAGlance.length > 0 && (
+                <div className="rounded-[2rem] border-2 border-sky-200 bg-sky-50/50 p-6 md:p-8">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-sky-700">
+                    At a Glance
+                  </p>
+                  <ul className="mt-4 space-y-3">
+                    {post.atAGlance.map((point) => (
+                      <li key={point} className="flex items-start gap-3">
+                        <svg
+                          className="mt-0.5 h-5 w-5 flex-shrink-0 text-sky-600"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="text-sm leading-relaxed text-navy-900 md:text-base">
+                          {point}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                    <Link href="/contact" className="btn btn-primary btn-md">
+                      Get a Free Quote
+                    </Link>
+                    <Link href={post.serviceHref} className="btn btn-outline btn-md">
+                      {post.serviceLabel}
+                    </Link>
+                  </div>
+                </div>
+              )}
+
               {post.image && (
                 <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-card">
                   <Image
@@ -186,8 +240,97 @@ export default async function BlogPostPage({
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
+                  {section.bullets && section.bullets.length > 0 && (
+                    <ul className="mt-5 space-y-3 rounded-2xl bg-slate-50 p-5">
+                      {section.bullets.map((bullet) => (
+                        <li key={bullet} className="flex items-start gap-3">
+                          <span
+                            className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-sky-500"
+                            aria-hidden="true"
+                          />
+                          <span className="text-sm leading-relaxed text-slate-700 md:text-base">
+                            {bullet}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </section>
               ))}
+
+              {post.soundLibrary && <SoundLibrary />}
+
+              {post.comparison && (
+                <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-card md:p-8">
+                  <h2 className="font-display text-display-sm font-bold text-navy-900">
+                    {post.comparison.title}
+                  </h2>
+                  <div className="mt-5 overflow-x-auto">
+                    <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
+                      <thead>
+                        <tr className="border-b-2 border-navy-900">
+                          <th scope="col" className="py-3 pr-4 font-bold text-navy-900">
+                            Option
+                          </th>
+                          {post.comparison.columns.map((column) => (
+                            <th key={column} scope="col" className="px-4 py-3 font-bold text-navy-900">
+                              {column}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {post.comparison.rows.map((row) => (
+                          <tr key={row.label} className="border-b border-slate-200">
+                            <th scope="row" className="py-3 pr-4 font-semibold text-navy-900">
+                              {row.label}
+                            </th>
+                            {row.cells.map((cell, cellIndex) => (
+                              <td
+                                key={`${row.label}-${post.comparison?.columns[cellIndex] ?? cellIndex}`}
+                                className="px-4 py-3 text-slate-600"
+                              >
+                                {cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              )}
+
+              {post.faqs && post.faqs.length > 0 && (
+                <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-card md:p-8">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate-400">
+                    Frequently Asked
+                  </p>
+                  <h2 className="mt-4 font-display text-display-sm font-bold text-navy-900">
+                    Questions we get asked about this
+                  </h2>
+                  <div className="mt-5 divide-y divide-slate-200">
+                    {post.faqs.map((faq) => (
+                      <details key={faq.question} className="group py-4">
+                        <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-base font-semibold text-navy-900 marker:hidden">
+                          {faq.question}
+                          <span
+                            className="mt-1 flex-shrink-0 text-sky-600 transition-transform group-open:rotate-45"
+                            aria-hidden="true"
+                          >
+                            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                              <path d="M12 5v14M5 12h14" />
+                            </svg>
+                          </span>
+                        </summary>
+                        <p className="mt-3 text-sm leading-relaxed text-slate-600 md:text-base">
+                          {faq.answer}
+                        </p>
+                      </details>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               <div className="rounded-[2rem] border border-slate-200 bg-navy-900 p-6 md:p-8">
                 <h2 className="font-display text-display-sm font-bold text-white">
