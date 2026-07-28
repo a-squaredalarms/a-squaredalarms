@@ -1120,6 +1120,16 @@ export default function CompliancePage() {
         </div>
       </section>
 
+      <RelatedArticles
+        slugs={[
+          'martyns-law-lockdown-requirements',
+          'martyns-law-for-schools-checklist',
+          'lockdown-procedure-risk-assessment',
+        ]}
+        heading="Martyn’s Law guidance in depth"
+        subheading="Full articles on what the legislation asks for, what it means for schools, and how to turn a risk assessment into a procedure staff can follow."
+      />
+
       <section className="relative overflow-hidden bg-navy-900" aria-label="Final compliance call to action">
         <div
           className="absolute inset-0 opacity-[0.03]"
@@ -1166,15 +1176,6 @@ export default function CompliancePage() {
           </div>
         </div>
       </section>
-      <RelatedArticles
-        slugs={[
-          'martyns-law-lockdown-requirements',
-          'martyns-law-for-schools-checklist',
-          'lockdown-procedure-risk-assessment',
-        ]}
-        heading="Martyn’s Law guidance in depth"
-        subheading="Full articles on what the legislation asks for, what it means for schools, and how to turn a risk assessment into a procedure staff can follow."
-      />
     </>
   )
 }
