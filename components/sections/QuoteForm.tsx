@@ -5,6 +5,7 @@ import {
   buildFormSubmitAutoresponse,
   buildFormSubmitSubject,
   FORM_SUBMIT_ACTION,
+  isLikelyBotSubmission,
   validateQuoteEnquiry,
 } from '@/lib/formsubmit'
 import {
@@ -85,6 +86,7 @@ const FORM_INPUT_CLASS =
 export function QuoteForm() {
   const [formData, setFormData] = useState<QuoteFormData>(createInitialFormData)
   const [status, setStatus] = useState<FormStatus>('idle')
+  const renderedAtRef = React.useRef(Date.now())
   const [errorMessage, setErrorMessage] = useState('')
   const [currentPath, setCurrentPath] = useState('/locations')
 
@@ -138,6 +140,13 @@ export function QuoteForm() {
     try {
       const form = e.currentTarget
       const data = new FormData(form)
+
+      if (isLikelyBotSubmission(data, renderedAtRef.current)) {
+        // Silently accept so a bot cannot tell what tripped the check.
+        setStatus('success')
+        return
+      }
+
       data.append('_subject', buildFormSubmitSubject(formData.serviceType, 'Quote Form'))
       data.append('_template', 'table')
       data.append('_autoresponse', buildFormSubmitAutoresponse(formData.serviceType))

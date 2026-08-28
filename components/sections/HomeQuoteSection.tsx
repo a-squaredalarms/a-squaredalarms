@@ -1,10 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import {
   buildFormSubmitAutoresponse,
   buildFormSubmitSubject,
   FORM_SUBMIT_ACTION,
+  isLikelyBotSubmission,
   getServiceLabel,
   validateQuoteEnquiry,
 } from '@/lib/formsubmit'
@@ -77,6 +78,7 @@ export function HomeQuoteSection({
 }: HomeQuoteSectionProps) {
   const [formData, setFormData] = useState<QuoteFormData>(createInitialFormData)
   const [status, setStatus] = useState<FormStatus>('idle')
+  const renderedAtRef = useRef(Date.now())
   const [activeStep, setActiveStep] = useState(0)
   const [stepError, setStepError] = useState('')
   const [currentPath, setCurrentPath] = useState(sectionId)
@@ -187,6 +189,13 @@ export function HomeQuoteSection({
     try {
       const form = e.currentTarget
       const data = new FormData(form)
+
+      if (isLikelyBotSubmission(data, renderedAtRef.current)) {
+        // Silently accept so a bot cannot tell what tripped the check.
+        setStatus('success')
+        return
+      }
+
       data.append('_subject', buildFormSubmitSubject(formData.serviceType, formName))
       data.append('_template', 'table')
       data.append('_autoresponse', buildFormSubmitAutoresponse(formData.serviceType))

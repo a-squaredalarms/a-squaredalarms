@@ -62,3 +62,31 @@ export function buildFormSubmitAutoresponse(serviceType: QuoteFormData['serviceT
     `${BRAND.name}`,
   ].join('\n')
 }
+
+// ─── Spam controls ────────────────────────────────────────────────────────────
+
+/**
+ * FormSubmit discards submissions where this field is filled. We also check it
+ * ourselves, so a form is protected regardless of how the provider behaves.
+ */
+export const HONEYPOT_FIELD = '_honey'
+
+/**
+ * Submissions faster than this are automated. Kept deliberately low: silently
+ * dropping a real enquiry costs more than letting some spam through, and
+ * browser autofill can make a genuine submission quick.
+ */
+export const MIN_SUBMIT_MS = 1500
+
+/**
+ * True when a submission looks automated. Callers should discard it silently
+ * rather than showing an error, so a bot cannot learn what tripped the check.
+ */
+export function isLikelyBotSubmission(data: FormData, renderedAt: number): boolean {
+  const honeypot = data.get(HONEYPOT_FIELD)
+  if (typeof honeypot === 'string' && honeypot.trim() !== '') {
+    return true
+  }
+
+  return Date.now() - renderedAt < MIN_SUBMIT_MS
+}

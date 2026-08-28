@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
-import { FORM_SUBMIT_ACTION } from '@/lib/formsubmit'
+import React, { useRef, useState } from 'react'
+import { FORM_SUBMIT_ACTION, HONEYPOT_FIELD, isLikelyBotSubmission } from '@/lib/formsubmit'
 import { isValidEmail } from '@/lib/form-validation'
 import { BRAND } from '@/lib/data'
 
@@ -14,6 +14,8 @@ const BROCHURE_PATH = '/downloads/a-squared-lockdown-alarm-brochure.pdf'
  */
 export function BrochureDownload({ exploreHref }: { exploreHref: string }) {
   const [open, setOpen] = useState(false)
+  const [honeypot, setHoneypot] = useState('')
+  const renderedAtRef = useRef(Date.now())
   const [email, setEmail] = useState('')
   const [organisation, setOrganisation] = useState('')
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -41,6 +43,14 @@ export function BrochureDownload({ exploreHref }: { exploreHref: string }) {
 
     try {
       const data = new FormData()
+      data.append(HONEYPOT_FIELD, honeypot)
+
+      if (isLikelyBotSubmission(data, renderedAtRef.current)) {
+        // Silently accept so a bot cannot tell what tripped the check.
+        setStatus('success')
+        return
+      }
+
       data.append('email', email)
       data.append('organisation', organisation || 'Not provided')
       data.append('_subject', 'Brochure download — Lockdown Alarm Systems')
@@ -200,6 +210,17 @@ export function BrochureDownload({ exploreHref }: { exploreHref: string }) {
       </div>
 
       <form onSubmit={handleSubmit} className="mt-5 space-y-4" noValidate>
+        <input
+          type="text"
+          name={HONEYPOT_FIELD}
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          className="hidden"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
+
         <div className="space-y-2">
           <label
             htmlFor="brochure-email"
