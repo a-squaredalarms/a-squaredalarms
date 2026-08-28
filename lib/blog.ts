@@ -3,6 +3,8 @@ import type { BlogPost } from '@/types'
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'lockdown-alarm-sounds-all-32-tones',
+    seoTitle: 'Lockdown Alarm Sounds: All 32 Tones',
+    seoDescription: 'Listen to all 32 sounder tones with frequency patterns and DIP switch codes. Choose a lockdown tone that cannot be confused with your fire alarm.',
     title: 'Lockdown Alarm Sounds: Listen to All 32 Sounder Tones',
     excerpt:
       'Every tone available on the sounder range, with the frequency pattern, DIP switch code and an audio sample you can play. Useful for choosing a lockdown tone that cannot be confused with your fire alarm.',
@@ -137,6 +139,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'how-much-does-a-lockdown-alarm-system-cost',
+    seoTitle: 'Lockdown Alarm System Cost UK',
+    seoDescription: 'What actually drives the price of a lockdown alarm system, what to check in a quote, and how to budget for a school or commercial site.',
     title: 'How Much Does a Lockdown Alarm System Cost in the UK?',
     excerpt:
       'The honest answer is that it depends on your site, not on the brand. Here is exactly what moves the price, what to watch for in a quote, and how to budget realistically for a school or commercial building.',
@@ -339,6 +343,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'lockdown-alarm-site-survey-what-to-expect',
+    seoTitle: 'Lockdown Alarm Site Survey Explained',
+    seoDescription: 'What happens during a free site survey, who to have in the room, and what you should receive afterwards.',
     title: 'Lockdown Alarm Site Survey: What to Expect and How to Prepare',
     excerpt:
       'A survey is where your procedures, your building and the system design get reconciled. Knowing what happens and who to have in the room turns a routine visit into a genuinely useful one.',
@@ -529,6 +535,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'wireless-vs-hard-wired-lockdown-alarm-systems',
+    seoTitle: 'Wireless vs Hard-Wired Lockdown Alarms',
+    seoDescription: 'Which suits your building, the honest trade-offs including battery maintenance, and why occupied sites usually go wireless.',
     title: 'Wireless vs Hard-Wired Lockdown Alarms: Which Is Right for Your Site?',
     excerpt:
       'This question comes up on almost every project. The answer depends on your building, your timescale and how much disruption you can absorb, and the trade-offs are more practical than technical.',
@@ -711,6 +719,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'install-lockdown-alarm-without-closing-your-site',
+    seoTitle: 'Installing Alarms Without Closing Your Site',
+    seoDescription: 'How to plan an installation around occupied buildings, term dates and exam periods with minimal disruption.',
     title: 'How to Install a Lockdown Alarm Without Closing Your Site',
     excerpt:
       'Most buildings cannot shut for a week while equipment goes in. Planning around occupancy, term dates and exams is usually what separates a smooth project from a disruptive one.',
@@ -886,6 +896,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'how-to-run-a-school-lockdown-drill',
+    seoTitle: 'How to Run a School Lockdown Drill',
+    seoDescription: 'Designing a drill that finds real gaps, which awkward times to test, and what to record afterwards for governors.',
     title: 'How to Run a School Lockdown Drill: A Practical Guide',
     excerpt:
       'A drill everyone knew about, at a convenient time, in good weather, tells you very little. Here is how to design one that surfaces the gaps you would rather find in practice than during a real incident.',
@@ -1076,6 +1088,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'who-can-trigger-a-lockdown-alarm',
+    seoTitle: 'Who Can Trigger a Lockdown Alarm?',
+    seoDescription: 'How to decide who raises the alert, where trigger points go, and why hesitation is a bigger risk than false alarms.',
     title: 'Who Should Be Able to Trigger a Lockdown Alarm?',
     excerpt:
       'Restrict the trigger too tightly and nobody can raise the alarm when it matters. Leave it too open and confidence drops. This decision shapes how the whole system gets used.',
@@ -1246,6 +1260,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'martyns-law-lockdown-requirements',
+    seoTitle: 'Martyn\'s Law: Lockdown Requirements',
+    seoDescription: 'A plain-language guide to the tiers, the four public protection procedures, and what to do before enforcement begins.',
     title: 'Martyn’s Law and Lockdown: What UK Premises Need to Do',
     excerpt:
       'The Terrorism (Protection of Premises) Act introduces duties for many publicly accessible places. Here is a plain-language explanation of the tiers, the four procedures, and what to do before enforcement begins.',
@@ -1429,6 +1445,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'martyns-law-for-schools-checklist',
+    seoTitle: 'Martyn\'s Law for Schools: Checklist',
+    seoDescription: 'A practical checklist for schools, covering outdoor coverage, lettings, visitors and who should own the procedure.',
     title: 'Martyn’s Law for Schools: A Practical Checklist',
     excerpt:
       'Schools already run drills, control access and plan for emergencies. The useful question is not whether you are starting from zero, but which parts of what you already do need extending.',
@@ -1600,6 +1618,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'lockdown-alarm-vs-fire-alarm',
+    seoTitle: 'Lockdown Alarm vs Fire Alarm',
+    seoDescription: 'Why the two signals must sound different, how to make the distinction obvious, and what to do if both could apply.',
     title: 'Lockdown Alarm vs Fire Alarm: Why They Must Sound Different',
     excerpt:
       'A fire alarm tells people to leave the building. A lockdown alert tells them to stay inside and secure. If the two can be confused, the response can be exactly wrong.',
@@ -1774,6 +1794,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'lockdown-procedure-risk-assessment',
+    seoTitle: 'Writing a Lockdown Procedure',
+    seoDescription: 'How to turn a risk assessment into a one-page procedure staff can actually follow under pressure.',
     title: 'Lockdown Procedures: Turning a Risk Assessment Into a Plan Staff Can Follow',
     excerpt:
       'Plenty of organisations have a thorough risk assessment and a procedure nobody can recall under pressure. Bridging that gap is mostly about making the plan short, concrete and practised.',
@@ -1945,6 +1967,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'lockdown-alarms-for-multi-academy-trusts',
+    seoTitle: 'Lockdown Alarms for Academy Trusts',
+    seoDescription: 'Rolling out across several schools: standardising the signal, central monitoring, phasing and building the business case.',
     title: 'Lockdown Alarms for Multi-Academy Trusts: Rolling Out Across Sites',
     excerpt:
       'Running the same procedure across several schools is harder than running it well at one. Here is how trusts across Greater Manchester and elsewhere handle the tension between consistency and site reality.',
@@ -2111,6 +2135,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'when-to-install-school-safety-systems',
+    seoTitle: 'When to Install School Safety Systems',
+    seoDescription: 'Planning around term dates, exam periods and lettings, and what to do if you have missed the window you wanted.',
     title: 'When to Install School Safety Systems: Planning Around Term Dates',
     excerpt:
       'Term dates, exams and lettings shape when work can realistically happen. On busy urban sites in London and other cities, the calendar often constrains a project more than the budget does.',
@@ -2288,6 +2314,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'what-strong-lockdown-planning-looks-like-on-real-sites',
+    seoTitle: 'What Strong Lockdown Planning Looks Like',
+    seoDescription: 'How effective lockdown plans are built around real circulation, entrances and staff response patterns.',
     title: 'What Strong Lockdown Planning Looks Like on Real Sites',
     excerpt:
       'Good lockdown planning is not just about adding a button or sounder. It is about creating a response staff can understand immediately, under pressure, in the spaces they actually use every day.',
@@ -2330,6 +2358,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'how-popalert-adds-clarity-to-emergency-communications',
+    seoTitle: 'How PopAlert Adds Clarity in an Incident',
+    seoDescription: 'How visual on-screen messaging helps office and admin teams receive the same instruction at the same moment.',
     title: 'How PopAlert Adds Clarity to Emergency Communications',
     excerpt:
       'Audible alarms create urgency, but visual instructions remove doubt. PopAlert helps teams receive the same plain-language message at the same time across connected devices.',
@@ -2371,6 +2401,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'fire-alarm-planning-for-schools-commercial-and-changing-sites',
+    seoTitle: 'Temporary Fire Alarm Planning',
+    seoDescription: 'Practical planning for schools, commercial buildings and sites that change shape during works.',
     title: 'Temporary Fire Alarm Planning for Schools, Commercial Buildings, and Changing Sites',
     excerpt:
       'Fire alarm design should reflect how a building is occupied, maintained, and likely to change over time. The right approach is rarely one-size-fits-all.',
@@ -2412,6 +2444,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'where-vape-detection-adds-the-most-value-in-schools',
+    seoTitle: 'Vape Detection in Schools',
+    seoDescription: 'Where detection adds the most value, how to deploy it with safeguarding in mind, and what the data actually tells you.',
     title: 'Where Vape Detection Adds the Most Value in Schools',
     excerpt:
       'Vape detection is most useful when it supports safeguarding teams with better visibility, faster alerts, and clearer evidence of where repeated issues are actually happening.',
@@ -2453,6 +2487,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'planning-paxton-access-control-for-reception-and-staff-areas',
+    seoTitle: 'Planning Paxton Access Control',
+    seoDescription: 'How to plan access control for reception, staff areas and restricted zones without disrupting daily site use.',
     title: 'Planning Paxton Access Control for Reception and Staff Areas',
     excerpt:
       'Good access control does not have to feel heavy-handed. The best systems make the right spaces easier to manage while keeping everyday movement simple for staff and authorised visitors.',
@@ -2494,6 +2530,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'out-of-hours-intrusion-protection-for-schools-and-commercial-sites',
+    seoTitle: 'Out-of-Hours Intrusion Protection',
+    seoDescription: 'Protecting schools and commercial sites when nobody is there, and how wireless systems suit phased upgrades.',
     title: 'Out-of-Hours Intrusion Protection for Schools and Commercial Sites',
     excerpt:
       'Intrusion protection is often most valuable when the site is quiet. The right setup helps organisations protect buildings, stores, offices, and vulnerable access points when occupancy drops.',
@@ -2535,6 +2573,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'introducing-popalert',
+    seoTitle: 'Introducing PopAlert',
+    seoDescription: 'A cost-effective whole-site alert system that pushes plain-language emergency messages to connected screens.',
     title: 'Introducing PopAlert',
     excerpt:
       'PopAlert is a modern lockdown and alert system that delivers instant full-screen notifications across a site, giving staff a fast and clear way to communicate during critical incidents.',

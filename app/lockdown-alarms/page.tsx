@@ -14,9 +14,9 @@ const WP = '/images'
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = buildMetadata({
-  title: "Lockdown Alarm Systems for UK Schools & Organisations",
+  title: "Lockdown Alarm Systems UK",
   description:
-    "Martyn's Law-aligned lockdown alarm systems designed for schools, offices, and public venues. Full-site alerting in under 3 seconds. Free survey.",
+    "Wireless lockdown alarms for schools and commercial sites, distinct from your fire alarm. Free survey and a written specification you keep.",
   canonical: 'https://a-squaredalarms.com/lockdown-alarms',
   keywords: [
     'lockdown alarm system UK',

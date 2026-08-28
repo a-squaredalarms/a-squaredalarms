@@ -9,9 +9,9 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 const WP = '/images'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Schools & Colleges Safety Systems | Lockdown, Fire, Vape & Site Security',
+  title: 'School & College Safety Systems',
   description:
-    'Safety systems for schools and colleges including lockdown alarms, PopAlert digital alerts, temporary fire alarms, vape detection, access control, and intrusion protection. School-focused planning and installation across the UK.',
+    'Lockdown alarms, vape detection, temporary fire alarms and access control for schools and colleges. Planning built around the school day.',
   canonical: 'https://a-squaredalarms.com/industries/schools',
   keywords: [
     'school lockdown alarm system UK',

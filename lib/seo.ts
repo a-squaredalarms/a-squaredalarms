@@ -7,6 +7,24 @@ import { BRAND, LOCAL_BUSINESS_SCHEMA } from '@/lib/data'
 const BASE_URL = 'https://a-squaredalarms.com'
 const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-default.jpg`
 
+/**
+ * Trims a description to the length Google will actually display (~155 chars),
+ * cutting at a sentence end where possible and a word boundary otherwise.
+ * Prefer writing a short description; this is the safety net.
+ */
+export function clampDescription(text: string, max = 155): string {
+  if (text.length <= max) return text
+
+  const window = text.slice(0, max + 1)
+
+  // Prefer ending on a complete sentence.
+  const lastStop = Math.max(window.lastIndexOf('. '), window.lastIndexOf('? '))
+  if (lastStop > max * 0.6) return window.slice(0, lastStop + 1).trim()
+
+  const lastSpace = window.lastIndexOf(' ')
+  return `${window.slice(0, lastSpace > 0 ? lastSpace : max).trim()}…`
+}
+
 export function buildMetadata({
   title,
   description,
@@ -240,8 +258,10 @@ export function buildFAQSchema(faqs: Array<{ question: string; answer: string }>
 
 export function buildLocationMetadata(location: LocationPage): Metadata {
   return buildMetadata({
-    title: `Lockdown & Temporary Fire Alarm Systems in ${location.city}`,
-    description: `A-Squared Alarms installs Martyn's Law-aligned lockdown systems, temporary fire alarms, and vape detection in ${location.city} and across ${location.region}. Get a free site survey today.`,
+    title: `Lockdown Alarms in ${location.city}`,
+    description: clampDescription(
+      `Lockdown alarms, temporary fire alarms and vape detection installed across ${location.city}. Free site survey and a written specification you can keep.`,
+    ),
     canonical: `${BASE_URL}/locations/${location.slug}`,
     keywords: [
       `lockdown alarm ${location.city}`,

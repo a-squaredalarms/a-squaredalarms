@@ -22,9 +22,9 @@ const PAXTON = {
 }
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Paxton Access Control Systems | UK Installation & Support',
+  title: 'Paxton Access Control Installation',
   description:
-    'Professional Paxton access control installation for schools, offices, healthcare settings, and commercial premises. Net2, Paxton10, PaxLock, Entry, readers, cards, fobs, and ongoing support.',
+    'Paxton access control for reception, staff areas and restricted zones. Professional UK installation, support and staff training.',
   canonical: 'https://a-squaredalarms.com/access-control',
   keywords: [
     'Paxton access control installation',

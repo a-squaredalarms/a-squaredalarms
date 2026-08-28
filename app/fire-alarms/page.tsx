@@ -14,9 +14,9 @@ const WP = '/images'
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Wireless Temporary Fire Alarm Systems — Built for Temporary Protection',
+  title: 'Temporary Fire Alarm Systems',
   description:
-    'Battery-powered, wireless temporary fire alarm systems deployable in minutes. IP66-rated units for construction sites, demolition sites, road works, and vacant properties. Get an online quote today.',
+    'Wireless temporary fire alarms for construction sites and buildings under works. Fast to deploy, easy to move, removed when you are done.',
   canonical: 'https://a-squaredalarms.com/fire-alarms',
   keywords: [
     'temporary fire alarm system UK',

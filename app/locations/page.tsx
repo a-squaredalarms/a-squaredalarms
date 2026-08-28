@@ -5,9 +5,9 @@ import { LOCATIONS, SERVICES } from '@/lib/data'
 import { CTASection } from '@/components/sections/CTASection'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Areas We Cover | Lockdown Alarm Installation Across the UK',
+  title: 'Areas We Cover',
   description:
-    'A-Squared Alarms installs lockdown alarms, temporary fire alarms, vape detection, access control and intrusion protection across London, Manchester, Birmingham, Leeds, Bristol and counties throughout England.',
+    'Lockdown alarms, temporary fire alarms and vape detection installed across London, Manchester, Birmingham, Leeds, Bristol and beyond.',
   canonical: 'https://a-squaredalarms.com/locations',
   keywords: [
     'lockdown alarm installer UK',

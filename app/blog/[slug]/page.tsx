@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema } from '@/lib/seo'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, clampDescription } from '@/lib/seo'
 import { BLOG_POSTS, getBlogPostBySlug, getRelatedBlogPosts } from '@/lib/blog'
 import { CTASection } from '@/components/sections/CTASection'
 import { SoundLibrary } from '@/components/sections/SoundLibrary'
@@ -24,8 +24,8 @@ export async function generateMetadata({
   if (!post) return {}
 
   return buildMetadata({
-    title: `${post.title} | Blog`,
-    description: post.excerpt,
+    title: post.seoTitle ?? post.title,
+    description: clampDescription(post.seoDescription ?? post.excerpt),
     canonical: `https://a-squaredalarms.com/blog/${post.slug}`,
     ...(post.image ? { ogImage: post.image.src } : {}),
     keywords: [

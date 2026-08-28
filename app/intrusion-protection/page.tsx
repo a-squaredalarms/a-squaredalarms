@@ -10,9 +10,9 @@ import { RelatedArticles } from '@/components/sections/RelatedArticles'
 const WP = '/images'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Intrusion Protection Systems | Ajax Wireless Security Installation',
+  title: 'Ajax Intrusion Protection Systems',
   description:
-    'Ajax wireless intrusion protection for schools, offices, and commercial premises. App-controlled detectors, instant alerts, perimeter protection, and professional installation across the UK.',
+    'Ajax wireless intrusion protection for schools and commercial premises. Out-of-hours cover with no cabling and phased upgrade options.',
   canonical: 'https://a-squaredalarms.com/intrusion-protection',
   keywords: [
     'intrusion protection system UK',

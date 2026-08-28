@@ -9,9 +9,9 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 const WP = '/images'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Construction Site Safety Systems | Temporary Fire Alarm & AJAX Site Security',
+  title: 'Construction Site Safety Systems',
   description:
-    'Construction site safety systems across the UK including temporary fire alarm systems and AJAX wireless site security. Fast deployment for active builds, cabins, compounds, welfare areas, and changing site layouts.',
+    'Wireless temporary fire alarms and Ajax site security for construction sites. Deployed fast, moved as the site changes, removed at the end.',
   canonical: 'https://a-squaredalarms.com/industries/construction',
   keywords: [
     'temporary fire alarm system for construction site',

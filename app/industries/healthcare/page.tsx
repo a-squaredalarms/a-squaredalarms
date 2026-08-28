@@ -9,9 +9,9 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 const WP = '/images'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Healthcare Safety Systems | GP Surgery, Clinic & Healthcare Site Protection',
+  title: 'Healthcare Safety Systems',
   description:
-    'Healthcare safety systems for GP surgeries, clinics, treatment centres, and healthcare estates including lockdown alarms, PopAlert digital alerts, access control, intrusion protection, and temporary fire alarm solutions.',
+    'Lockdown alarms and site security for GP surgeries, clinics and healthcare estates. Planned around clinic timetables and patient areas.',
   canonical: 'https://a-squaredalarms.com/industries/healthcare',
   keywords: [
     'healthcare lockdown alarm system',

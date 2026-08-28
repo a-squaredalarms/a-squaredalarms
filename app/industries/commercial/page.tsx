@@ -9,9 +9,9 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 const WP = '/images'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Commercial Safety Systems | Office Lockdown, Access Control & Site Security',
+  title: 'Commercial Safety Systems',
   description:
-    'Commercial safety systems for offices, business parks, multi-tenant buildings, and public-facing workplaces including lockdown alarms, PopAlert digital alerts, access control, intrusion protection, and temporary fire alarm solutions.',
+    'Lockdown alarms, access control and intrusion protection for offices, business parks and multi-tenant buildings across the UK.',
   canonical: 'https://a-squaredalarms.com/industries/commercial',
   keywords: [
     'office lockdown alarm system',

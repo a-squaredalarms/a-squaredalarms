@@ -11,9 +11,9 @@ const SIA_GUIDANCE_URL =
 const WP = '/images'
 
 export const metadata: Metadata = buildMetadata({
-  title: "Martyn's Law Compliance | Security Support & Site Reviews",
+  title: "Martyn\'s Law Compliance Support",
   description:
-    "Practical Martyn's Law compliance support for UK premises, venues, schools, public spaces, and events. Site security reviews, CCTV, access control, alarms, and maintenance services.",
+    "Practical help preparing for Martyn\'s Law: procedures, site reviews and alerting that meets the communication duty. Free site survey.",
   canonical: 'https://a-squaredalarms.com/compliance',
   keywords: [
     "Martyn's Law compliance",

@@ -223,6 +223,10 @@ export interface BlogPost {
   comparison?: BlogComparison
   /** Renders the playable 32-tone sounder library after the article sections. */
   soundLibrary?: boolean
+  /** Shorter title for the <title> tag, where the article title would truncate. */
+  seoTitle?: string
+  /** Shorter meta description, where the excerpt would truncate. */
+  seoDescription?: string
 }
 
 // ─── Case Study Types ─────────────────────────────────────────────────────────

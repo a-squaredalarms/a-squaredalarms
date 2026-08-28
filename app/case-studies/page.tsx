@@ -5,9 +5,9 @@ import { CASE_STUDIES, MANUFACTURER, getFeaturedCaseStudy } from '@/lib/case-stu
 import { CTASection } from '@/components/sections/CTASection'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Lockdown Alarm Case Studies | Real School & Trust Deployments',
+  title: 'Lockdown Alarm Case Studies',
   description:
-    'Alertex lockdown system case studies published by the manufacturer, covering all-through schools and multi-academy trusts across the UK. See how wireless lockdown alerting works on real sites.',
+    'Real Alertex deployments in schools and multi-academy trusts, published by the manufacturer. See what the systems involve in practice.',
   canonical: 'https://a-squaredalarms.com/case-studies',
   keywords: [
     'lockdown alarm case studies',

@@ -11,9 +11,9 @@ import { HomeQuoteSection } from '@/components/sections/HomeQuoteSection'
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = buildMetadata({
-  title: "UK Lockdown & Safety Alarm Systems Specialists",
+  title: "UK Lockdown & Safety Alarm Systems",
   description:
-    "A-Squared Alarms installs Martyn's Law-aligned lockdown systems, temporary fire alarms, and vape detection across the UK. Free site survey. Call 07778 387 989.",
+    "Martyn\'s Law-aligned lockdown alarms, temporary fire alarms and vape detection installed UK-wide. Free site survey, no obligation.",
   canonical: 'https://a-squaredalarms.com',
   keywords: [
     'lockdown alarm system UK',
