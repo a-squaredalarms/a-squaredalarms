@@ -18,6 +18,7 @@ import {
   validateContactDetails,
 } from '@/lib/form-validation'
 import type { FormStatus, QuoteFormData } from '@/types'
+import { trackEvent } from '@/lib/analytics'
 
 const HOME_SERVICE_OPTIONS: Array<{
   value: QuoteFormData['serviceType']
@@ -211,6 +212,7 @@ export function HomeQuoteSection({
 
       if (res.ok && json.success === 'true') {
         setStatus('success')
+        trackEvent('generate_lead', { form_name: formName, service_type: formData.serviceType })
       } else {
         setStepError(json.message || 'Submission failed. Please call us directly.')
         setStatus('error')

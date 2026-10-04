@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react'
 import { FORM_SUBMIT_ACTION, HONEYPOT_FIELD, isLikelyBotSubmission } from '@/lib/formsubmit'
 import { isValidEmail } from '@/lib/form-validation'
 import { BRAND } from '@/lib/data'
+import { trackEvent } from '@/lib/analytics'
 
 const BROCHURE_PATH = '/downloads/a-squared-lockdown-alarm-brochure.pdf'
 
@@ -84,6 +85,7 @@ export function BrochureDownload({ exploreHref }: { exploreHref: string }) {
 
       if (res.ok && json.success === 'true') {
         setStatus('success')
+        trackEvent('generate_lead', { form_name: 'Brochure Download' })
         triggerDownload()
       } else {
         // Never withhold the file because our delivery failed.

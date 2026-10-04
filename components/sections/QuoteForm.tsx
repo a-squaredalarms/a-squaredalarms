@@ -15,6 +15,7 @@ import {
   validateContactDetails,
 } from '@/lib/form-validation'
 import type { QuoteFormData, FormStatus } from '@/types'
+import { trackEvent } from '@/lib/analytics'
 
 // ─── Field components ─────────────────────────────────────────────────────────
 
@@ -162,6 +163,7 @@ export function QuoteForm() {
 
       if (res.ok && json.success === 'true') {
         setStatus('success')
+        trackEvent('generate_lead', { form_name: 'Quote Form', service_type: formData.serviceType })
       } else {
         setErrorMessage(json.message || 'Submission failed. Please call us directly.')
         setStatus('error')

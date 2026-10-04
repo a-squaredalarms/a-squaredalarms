@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { CONSENT_KEY, GA_MEASUREMENT_ID, OPEN_CONSENT_EVENT, type ConsentChoice } from '@/lib/analytics'
+import { CONSENT_KEY, GA_MEASUREMENT_ID, OPEN_CONSENT_EVENT, trackEvent, type ConsentChoice } from '@/lib/analytics'
 
 declare global {
   interface Window {
@@ -67,8 +67,17 @@ export function CookieConsent() {
     if (choice === 'granted') loadAnalytics()
     if (choice === null) setOpen(true)
     const reopen = () => setOpen(true)
+    // One listener covers every phone link on the site (header, hero, footer, CTAs, forms).
+    const onClick = (e: MouseEvent) => {
+      const link = (e.target as Element | null)?.closest?.('a[href^="tel:"]')
+      if (link) trackEvent('phone_click', { link_url: link.getAttribute('href') })
+    }
     window.addEventListener(OPEN_CONSENT_EVENT, reopen)
-    return () => window.removeEventListener(OPEN_CONSENT_EVENT, reopen)
+    document.addEventListener('click', onClick)
+    return () => {
+      window.removeEventListener(OPEN_CONSENT_EVENT, reopen)
+      document.removeEventListener('click', onClick)
+    }
   }, [])
 
   if (!GA_MEASUREMENT_ID || !open) return null
