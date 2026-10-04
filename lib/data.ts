@@ -23,11 +23,6 @@ export const BRAND = {
     postcode: 'E17 3NU',
     full: 'Suite RA01, 195–197 Wood Street, London, E17 3NU',
   },
-  social: {
-    facebook: 'https://facebook.com',
-    twitter: 'https://twitter.com',
-    youtube: 'https://youtube.com',
-  },
 } as const
 
 // ─── Services ─────────────────────────────────────────────────────────────────
@@ -1556,10 +1551,7 @@ export const LOCAL_BUSINESS_SCHEMA: LocalBusinessSchema = {
     latitude: 51.5857,
     longitude: -0.0149,
   },
-  openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-13:00'],
-  sameAs: [
-    'https://www.facebook.com',
-    'https://www.twitter.com',
-    'https://www.youtube.com',
+  openingHours: [
+    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
   ],
 }

@@ -152,8 +152,7 @@ export interface LocalBusinessSchema {
     latitude: number
     longitude: number
   }
-  openingHours: string[]
-  sameAs: string[]
+  openingHours: Array<{ days: string[]; opens: string; closes: string }>
 }
 
 export interface ServiceSchema {

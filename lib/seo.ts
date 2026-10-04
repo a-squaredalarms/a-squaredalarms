@@ -121,9 +121,10 @@ export function buildLocalBusinessSchema(override?: Partial<LocalBusinessSchema>
     },
     openingHoursSpecification: data.openingHours.map((hours) => ({
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: hours,
+      dayOfWeek: hours.days,
+      opens: hours.opens,
+      closes: hours.closes,
     })),
-    sameAs: data.sameAs,
     priceRange: '££',
     currenciesAccepted: 'GBP',
     paymentAccepted: 'Cash, Credit Card, Bank Transfer',

@@ -164,7 +164,7 @@ export default function ContactPage() {
                     }
                     label="Phone"
                     value={BRAND.phone}
-                    sublabel="Mon–Fri 8am–6pm, Sat 9am–1pm"
+                    sublabel="Mon–Fri 8am–6pm"
                     href={`tel:${BRAND.phone.replace(/\s/g, '')}`}
                   />
 
