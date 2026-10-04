@@ -70,10 +70,10 @@ const ALERTS: AlertPreset[] = [
 ]
 
 const POPALERT_FEATURES = [
-  'Sub-2-second broadcast',
+  'Full-screen alerts within seconds',
   'Admin web console + scheduled drills',
   'Works on your existing PCs',
-  'SCIM / AD integration',
+  'Integrates with Alertex & access control',
 ]
 
 function classNames(...classes: Array<string | false | null | undefined>) {
