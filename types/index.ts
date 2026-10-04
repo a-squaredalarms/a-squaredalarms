@@ -73,6 +73,11 @@ export interface LocationPage {
   authorities?: string[]
   /** Rendered as an accordion and emitted as FAQPage structured data. */
   faqs?: BlogFAQ[]
+  /** Optional SEO overrides for areas where Search Console shows a specific demand (e.g. town names). */
+  seoTitle?: string
+  seoDescription?: string
+  heading?: string
+  lead?: string
 }
 
 // ─── CTA Types ────────────────────────────────────────────────────────────────

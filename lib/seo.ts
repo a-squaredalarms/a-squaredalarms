@@ -258,9 +258,10 @@ export function buildFAQSchema(faqs: Array<{ question: string; answer: string }>
 
 export function buildLocationMetadata(location: LocationPage): Metadata {
   return buildMetadata({
-    title: `Lockdown Alarms in ${location.city}`,
+    title: location.seoTitle ?? `Lockdown Alarms in ${location.city}`,
     description: clampDescription(
-      `Lockdown alarms, temporary fire alarms and vape detection installed across ${location.city}. Free site survey and a written specification you can keep.`,
+      location.seoDescription ??
+        `Lockdown alarms, temporary fire alarms and vape detection installed across ${location.city}. Free site survey and a written specification you can keep.`,
     ),
     canonical: `${BASE_URL}/locations/${location.slug}`,
     keywords: [

@@ -165,11 +165,11 @@ export default async function LocationPage({
             </div>
 
             <h1 className="font-display text-display-2xl font-extrabold leading-[1.05] text-white">
-              Lockdown Alarms &amp; Safety Systems in {location.city}
+              {location.heading ?? `Lockdown Alarms & Safety Systems in ${location.city}`}
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-slate-300">
-              Lockdown alarms, temporary fire alarms, vape detection, access control and intrusion
-              protection for schools, construction sites and commercial premises across {areaLabel}.
+              {location.lead ??
+                `Lockdown alarms, temporary fire alarms, vape detection, access control and intrusion protection for schools, construction sites and commercial premises across ${areaLabel}.`}
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/contact" className="btn btn-accent btn-lg">

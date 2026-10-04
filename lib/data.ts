@@ -358,6 +358,10 @@ export const LOCATIONS: LocationPage[] = [
     coordinates: { lat: 53.4808, lng: -2.2426 },
     nearbyAreas: ['Salford', 'Trafford', 'Stockport', 'Oldham', 'Bolton'],
     areaType: 'city',
+    seoTitle: 'Vape Detectors & Lockdown Alarms in Manchester',
+    seoDescription: 'Vape detectors and lockdown alarms for schools across Greater Manchester, plus temporary fire alarms for construction sites. Free site survey.',
+    heading: 'Vape Detectors & Lockdown Alarms in Manchester',
+    lead: 'Vape detection and lockdown alarms for schools and colleges across Greater Manchester, plus temporary fire alarms and access control.',
     authorities: [
       'Manchester',
       'Salford',
@@ -847,8 +851,12 @@ export const LOCATIONS: LocationPage[] = [
     slug: 'kent',
     region: 'South East England',
     coordinates: { lat: 51.2787, lng: 0.5217 },
-    nearbyAreas: ['Maidstone', 'Canterbury', 'Medway', 'Dartford', 'Ashford', 'Tunbridge Wells'],
+    nearbyAreas: ['Medway', 'Maidstone', 'Tonbridge', 'Canterbury', 'Dartford', 'Ashford', 'Tunbridge Wells'],
     areaType: 'county',
+    seoTitle: 'School Lockdown Alarms in Kent & Medway',
+    seoDescription: 'School lockdown alarms installed across Kent, including Medway, Maidstone and Tonbridge. Wireless systems, a free site survey and Martyn’s Law guidance.',
+    heading: 'School Lockdown Alarms in Kent, Medway & Maidstone',
+    lead: 'Wireless lockdown alarms for schools in Medway, Maidstone, Tonbridge and across Kent, plus temporary fire alarms, vape detection and access control.',
     authorities: [
       'Maidstone',
       'Canterbury',
@@ -872,6 +880,14 @@ export const LOCATIONS: LocationPage[] = [
       'Commuter town sites in Dartford, Gravesend and Maidstone',
     ],
     localContext: [
+      {
+        heading: 'School lockdown alarms in Medway, Maidstone and Tonbridge',
+        paragraphs: [
+          'Medway (Chatham, Gillingham, Rochester and Strood), Maidstone and Tonbridge hold some of the largest concentrations of schools in Kent, from town-centre primaries to large secondary and grammar school sites.',
+          'For most of these schools a wireless lockdown alarm is the practical choice: call points and sounders are surface-mounted, there is no cabling through occupied classrooms, and installation can be planned around the school day.',
+          'A typical specification combines fixed call points at reception and key corridors, portable triggers for staff on duty outdoors, and distinct lockdown and all-clear tones that cannot be confused with the fire alarm. Every site is surveyed before we quote, so the layout reflects the actual buildings rather than a template.',
+        ],
+      },
       {
         heading: 'A selective system and wide catchments',
         paragraphs: [
@@ -1005,6 +1021,10 @@ export const LOCATIONS: LocationPage[] = [
     coordinates: { lat: 51.8098, lng: -0.2377 },
     nearbyAreas: ['Watford', 'St Albans', 'Stevenage', 'Hemel Hempstead', 'Hertford', 'Welwyn Garden City'],
     areaType: 'county',
+    seoTitle: 'Temporary Fire Alarms in Hertfordshire',
+    seoDescription: 'Wireless temporary fire alarms for construction sites and refurbishments across Hertfordshire, including St Albans and Watford. Free site survey.',
+    heading: 'Temporary Fire Alarms & Lockdown Alarms in Hertfordshire',
+    lead: 'Wireless temporary fire alarms for construction sites in St Albans, Watford, Hemel Hempstead and across Hertfordshire, plus lockdown alarms for schools.',
     authorities: [
       'Watford',
       'St Albans',
@@ -1028,6 +1048,14 @@ export const LOCATIONS: LocationPage[] = [
       'Distribution and light industrial premises near the motorway corridors',
     ],
     localContext: [
+      {
+        heading: 'Temporary fire alarms in St Albans, Watford and across Hertfordshire',
+        paragraphs: [
+          'Hertfordshire has a steady pipeline of residential and commercial construction, from town-centre redevelopment in Watford and St Albans to new housing around Hemel Hempstead and Stevenage. Each of those sites needs a fire alarm that works from the first day on site.',
+          'Our wireless temporary fire alarms are linked call points and sounders that need no cabling and run on long-life batteries, so they can be moved as the build progresses and keep pace with phases, scaffold changes and new welfare cabins.',
+          'They are also used during refurbishment of occupied buildings such as schools and offices, where the permanent fire alarm is isolated while works take place.',
+        ],
+      },
       {
         heading: 'New town building stock',
         paragraphs: [

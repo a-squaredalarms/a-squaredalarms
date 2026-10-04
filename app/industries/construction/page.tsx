@@ -9,7 +9,7 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 const WP = '/images'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Construction Site Safety Systems',
+  title: 'Construction Site Temporary Fire Alarms',
   description:
     'Wireless temporary fire alarms and Ajax site security for construction sites. Deployed fast, moved as the site changes, removed at the end.',
   canonical: 'https://a-squaredalarms.com/industries/construction',
@@ -212,7 +212,7 @@ export default function ConstructionIndustryPage() {
             </div>
 
             <h1 className="font-display text-display-2xl font-extrabold leading-[1.03] text-white">
-              Construction Site Safety Systems Need to Deploy Fast and Keep Pace with the Build.
+              Temporary Fire Alarm Systems for Construction Sites, Deployed Fast and Built to Keep Pace.
             </h1>
 
             <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
