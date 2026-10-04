@@ -67,10 +67,11 @@ export function CookieConsent() {
     if (choice === 'granted') loadAnalytics()
     if (choice === null) setOpen(true)
     const reopen = () => setOpen(true)
-    // One listener covers every phone link on the site (header, hero, footer, CTAs, forms).
+    // One listener covers every phone and email link on the site (header, hero, footer, CTAs, forms).
     const onClick = (e: MouseEvent) => {
-      const link = (e.target as Element | null)?.closest?.('a[href^="tel:"]')
-      if (link) trackEvent('phone_click', { link_url: link.getAttribute('href') })
+      const link = (e.target as Element | null)?.closest?.('a[href^="tel:"], a[href^="mailto:"]')
+      const href = link?.getAttribute('href')
+      if (href) trackEvent(href.startsWith('tel:') ? 'phone_click' : 'email_click', { link_url: href.split('?')[0] })
     }
     window.addEventListener(OPEN_CONSENT_EVENT, reopen)
     document.addEventListener('click', onClick)
