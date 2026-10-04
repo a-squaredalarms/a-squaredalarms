@@ -200,7 +200,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const STATS: StatItem[] = [
   { value: '500+', label: 'Systems Installed', sublabel: 'Across the UK' },
   { value: '<3s', label: 'Alert Activation Time', sublabel: 'Full-site coverage' },
-  { value: '100%', label: 'Compliance Rate', sublabel: 'On all installations' },
+  { value: 'Free', label: 'Site Survey', sublabel: 'Written specification included' },
   { value: '24/7', label: 'Support Available', sublabel: 'UK-based engineers' },
 ]
 

@@ -49,7 +49,7 @@ function StatPill({ value, label }: StatPillProps) {
 const DEFAULT_STATS: HeroProps['stats'] = [
   { value: 'UK-Wide', label: 'Coverage' },
   { value: '24-48hr', label: 'Quotation' },
-  { value: '100%', label: 'Compliance Rate' },
+  { value: 'Free', label: 'Site Survey' },
 ]
 
 const HERO_BRANDS = ['PopAlert', 'VapeSense', 'Alertex', 'Ajax']
@@ -165,9 +165,9 @@ export function Hero({
                   </svg>
                 </div>
                 <div>
-                  <p className="font-semibold text-white text-sm">Martyn's Law is Now in Force</p>
+                  <p className="font-semibold text-white text-sm">Martyn's Law Duties Start in Spring 2027</p>
                   <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                    The Terrorism (Protection of Premises) Act requires qualifying UK venues to have documented emergency procedures. Non-compliance carries significant penalties.
+                    The Terrorism (Protection of Premises) Act 2025 will require qualifying UK premises to have procedures for evacuation, invacuation, lockdown and communication. Now is the time to prepare.
                   </p>
                 </div>
               </div>
