@@ -3071,6 +3071,274 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "lockdown-systems-for-hospitals-gp-surgeries-and-clinics",
+    seoTitle: "Lockdown Systems for Healthcare Sites",
+    seoDescription: "How lockdown alarm systems work in hospitals, GP surgeries and clinics: triggers, discreet staff alerts, patients who can’t move, and Martyn’s Law.",
+    title: "Lockdown Systems for Hospitals, GP Surgeries and Clinics",
+    excerpt: "Healthcare sites can’t simply clear the building in an emergency. Patients may be unable to move, doors are open to the public all day, and alarms must not cause panic. Here is how lockdown systems are planned for healthcare.",
+    category: "Lockdown Alarm Systems",
+    publishedAt: "2026-08-19",
+    displayDate: "19 August 2026",
+    readTime: "6 min read",
+    author: "A-Squared Editorial Team",
+    serviceHref: "/industries/healthcare",
+    serviceLabel: "Explore Healthcare Safety Systems",
+    atAGlance: [
+      "In healthcare, lockdown and invacuation are often safer than evacuation for patients who cannot move.",
+      "Reception and front-desk staff need a fast, discreet way to raise the alarm.",
+      "Staff alerts should be clear without alarming patients unnecessarily.",
+      "Larger sites open to the public are likely to fall within Martyn’s Law.",
+    ],
+    keyTakeaways: [
+      "Plan the lockdown around patients who cannot leave, not just staff who can.",
+      "Combine discreet staff triggers with a signal that cannot be confused with the fire alarm.",
+      "Rehearse with every shift pattern, including nights and weekends.",
+    ],
+    sections: [
+      {
+        heading: "Why healthcare lockdown is different",
+        paragraphs: [
+          "Most lockdown plans assume people can move quickly to a safe room. In healthcare that is often not true. Patients may be in treatment, recovering from procedures, frail or reliant on equipment, and visitors may not know the building at all.",
+          "Healthcare sites are also open to the public for long hours, with reception desks, waiting areas and multiple entrances. The threat is just as likely to start in the waiting room as outside the building, which is why front-of-house staff need to be able to raise the alarm instantly.",
+        ],
+      },
+      {
+        heading: "Typical triggers for raising a lockdown",
+        paragraphs: [
+        ],
+        bullets: [
+          "Aggressive or violent behaviour in a waiting area or at reception",
+          "An intruder or a person who has been refused entry trying to get in",
+          "A serious incident outside the building, where people need to come in and stay in",
+          "Concerns about the safety of a patient or staff member in a specific area",
+        ],
+      },
+      {
+        heading: "What a healthcare lockdown system needs",
+        paragraphs: [
+          "The best systems balance speed with calm. They let staff act in seconds without causing panic among patients.",
+        ],
+        bullets: [
+          "Discreet triggers at reception, consulting rooms and nurses’ stations, plus portable triggers for staff on the move",
+          "A lockdown tone and beacon that is clearly different from the fire alarm",
+          "Zoned or staged alerts on larger sites, so the right areas respond",
+          "Integration with door access control so external doors can be secured quickly",
+          "On-screen staff instructions, for example with PopAlert, so staff know exactly what to do without a loud announcement",
+        ],
+      },
+      {
+        heading: "GP surgeries and small clinics",
+        paragraphs: [
+          "Smaller practices rarely need a complex system. A handful of wireless call points at reception and in consulting rooms, a distinct sounder in the staff areas and a clear procedure will cover most surgeries. Because the devices are wireless, installation can usually be done around clinic hours without disruption.",
+        ],
+      },
+      {
+        heading: "Martyn’s Law and healthcare",
+        paragraphs: [
+          "Hospitals, primary care clinics and doctor and dentist surgeries are listed premises under Martyn’s Law. Where 200 or more people can reasonably be expected at once, staff included, the duties are expected to apply from spring 2027: procedures for evacuation, invacuation, lockdown and communication, with additional measures for larger sites. A lockdown alarm is a practical way to deliver the communication part.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do GP surgeries need a lockdown alarm?",
+        answer: "There is no single rule for every surgery, but any site where staff may face aggressive behaviour or an intruder benefits from a fast, discreet way to raise the alarm. Larger practices may also fall within Martyn’s Law.",
+      },
+      {
+        question: "Will a lockdown alarm frighten patients?",
+        answer: "It doesn’t have to. Many healthcare sites use discreet triggers and staff-area sounders or on-screen alerts, so staff respond quickly without a loud alarm in patient areas.",
+      },
+      {
+        question: "Can a lockdown system be installed without disrupting clinics?",
+        answer: "Yes. Wireless call points and sounders need no cabling, so installation can usually be planned around opening hours.",
+      },
+    ],
+  },
+  {
+    slug: "lockdown-alarms-for-colleges-and-universities",
+    seoTitle: "Lockdown Alarms for Colleges & Universities",
+    seoDescription: "Planning lockdown alarms across college and university campuses: multiple buildings, open sites, students outdoors, and Martyn’s Law duties.",
+    title: "Lockdown Alarms for Colleges and Universities",
+    excerpt: "A college or university is not a big school. Open campuses, many buildings, adult learners and public access change how a lockdown alarm has to work.",
+    category: "Lockdown Alarm Systems",
+    publishedAt: "2026-09-02",
+    displayDate: "2 September 2026",
+    readTime: "6 min read",
+    author: "A-Squared Editorial Team",
+    serviceHref: "/industries/schools",
+    serviceLabel: "Explore School & College Lockdown Alarms",
+    atAGlance: [
+      "Campuses have many buildings and open spaces, so coverage has to reach outdoors as well as in.",
+      "Students move between buildings all day and may not know the procedure.",
+      "Zoned alerts let one building lock down without stopping the whole campus.",
+      "Further education colleges are always in Martyn’s Law’s standard tier.",
+    ],
+    keyTakeaways: [
+      "Design for an open campus, not a single building.",
+      "Combine audible alarms outdoors with clear instructions indoors.",
+      "Test with real timetables, including evenings and enrolment days.",
+    ],
+    sections: [
+      {
+        heading: "Why campuses are harder to lock down",
+        paragraphs: [
+          "Most schools have one main building and a controlled perimeter. Colleges and universities often have neither. Students move between buildings throughout the day, the public can walk through parts of the site, and libraries, cafés and sports facilities stay open into the evening.",
+          "That means a lockdown has to reach people who are outdoors or between buildings, and it has to make sense to students who may never have practised the procedure.",
+        ],
+      },
+      {
+        heading: "Zoning across buildings",
+        paragraphs: [
+          "On a large campus, locking everything down for an incident in one building can cause more confusion than it prevents. Zoned systems let security or senior staff trigger a lockdown in one building, a group of buildings or the whole site, with the right message for each.",
+        ],
+      },
+      {
+        heading: "Reaching people outside",
+        paragraphs: [
+          "Outdoor sounders and beacons are essential where students walk between buildings, gather in courtyards or use playing fields. Weatherproof wireless units can be mounted on building exteriors and in open spaces without trenching cables across the site.",
+          "Indoors, on-screen alerts such as PopAlert can add a written instruction to every computer and display, which helps in lecture theatres, libraries and IT suites where people may not recognise a tone.",
+        ],
+      },
+      {
+        heading: "Who can trigger a lockdown",
+        paragraphs: [
+          "Most colleges give trigger access to reception teams, security staff and senior leaders, with portable triggers for staff on patrol. The aim is that anyone who sees a threat can reach a trigger within seconds, while avoiding accidental activations.",
+        ],
+      },
+      {
+        heading: "Martyn’s Law for colleges and universities",
+        paragraphs: [
+          "Further education colleges are always treated as standard tier under Martyn’s Law, regardless of size. Universities are also covered as education premises, and large university sites may fall within the enhanced tier. Either way, documented lockdown and communication procedures will be expected once the duties apply, expected from spring 2027.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Can one part of a campus lock down without the rest?",
+        answer: "Yes. Zoned lockdown systems can alert a single building, a group of buildings or the whole site.",
+      },
+      {
+        question: "Do lockdown alarms work outdoors?",
+        answer: "Yes. Weatherproof sounders and beacons can cover courtyards, car parks and playing fields, which is essential on an open campus.",
+      },
+      {
+        question: "Does Martyn’s Law apply to colleges?",
+        answer: "Further education colleges where 200 or more people can be expected at once are always in the standard tier, which requires procedures for evacuation, invacuation, lockdown and communication.",
+      },
+    ],
+  },
+  {
+    slug: "lockdown-alarm-vs-lockdown-alert-system",
+    seoTitle: "Lockdown Alarm vs Lockdown Alert System",
+    seoDescription: "What’s the difference between a lockdown alarm and a lockdown alert system? Audible alarms, on-screen alerts and when you need both.",
+    title: "Lockdown Alarm vs Lockdown Alert System: What’s the Difference?",
+    excerpt: "People use “lockdown alarm” and “lockdown alert system” as if they mean the same thing. They don’t quite, and the difference matters when you’re deciding what your site needs.",
+    category: "Lockdown Alarm Systems",
+    publishedAt: "2026-09-16",
+    displayDate: "16 September 2026",
+    readTime: "5 min read",
+    author: "A-Squared Editorial Team",
+    serviceHref: "/lockdown-alarms",
+    serviceLabel: "Explore Lockdown Alarm Systems",
+    atAGlance: [
+      "A lockdown alarm is the audible and visual signal: sounders, tones and beacons.",
+      "A lockdown alert system can also include written instructions, on screens or phones.",
+      "Alarms reach everyone, including outdoors; on-screen alerts tell people exactly what to do.",
+      "Many sites use both, triggered together.",
+    ],
+    keyTakeaways: [
+      "Start with an audible lockdown alarm that is distinct from the fire alarm.",
+      "Add on-screen instructions where people work at computers or screens.",
+      "Trigger everything from one point so nobody has to raise the alarm twice.",
+    ],
+    sections: [
+      {
+        heading: "What a lockdown alarm does",
+        paragraphs: [
+          "A lockdown alarm is the physical signal: call points or panic buttons that trigger sounders and beacons across the site, using a tone and colour that are clearly different from the fire alarm. Its job is to make sure everyone, indoors and outdoors, knows instantly that a lockdown has started.",
+          "It works whether or not people are near a screen, which is why it is the foundation of almost every lockdown procedure.",
+        ],
+      },
+      {
+        heading: "What a lockdown alert system adds",
+        paragraphs: [
+          "A sound tells people that something is happening, but not what to do. A lockdown alert system adds the instruction. That might be a full-screen message on every computer, such as PopAlert, a notification to staff phones, or a spoken announcement.",
+          "Written instructions are especially useful for visitors, supply staff and contractors who have never heard your lockdown tone before, and for updates as the situation changes, such as “remain in lockdown” or the all clear.",
+        ],
+      },
+      {
+        heading: "When you need both",
+        paragraphs: [
+          "For most schools and larger workplaces, the strongest setup is both, triggered together:",
+        ],
+        bullets: [
+          "The lockdown alarm reaches corridors, halls, playgrounds and car parks",
+          "On-screen alerts tell classrooms and offices exactly what to do",
+          "One trigger starts both, so staff don’t have to raise the alarm twice",
+          "Live updates and the all clear go out through the same system",
+        ],
+      },
+    ],
+    comparison: {
+      title: "Lockdown alarm vs lockdown alert system",
+      columns: [
+        "Lockdown alarm",
+        "On-screen alert system",
+      ],
+      rows: [
+        {
+          label: "Reaches people outdoors",
+          cells: [
+            "Yes",
+            "No, only where there are screens",
+          ],
+        },
+        {
+          label: "Tells people what to do",
+          cells: [
+            "Tone only, or a spoken message",
+            "Yes, written instructions",
+          ],
+        },
+        {
+          label: "Works for visitors",
+          cells: [
+            "Only if the tone is recognised",
+            "Yes, the instruction is on screen",
+          ],
+        },
+        {
+          label: "Live updates",
+          cells: [
+            "Limited",
+            "Yes",
+          ],
+        },
+        {
+          label: "Best used",
+          cells: [
+            "As the foundation",
+            "Alongside an alarm",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Is an on-screen alert enough on its own?",
+        answer: "Rarely. It doesn’t reach people outdoors or away from screens, so most sites use it alongside an audible lockdown alarm.",
+      },
+      {
+        question: "Can PopAlert be triggered by a lockdown alarm?",
+        answer: "Yes. PopAlert can be triggered from lockdown alarm systems such as Alertex, so one trigger starts both the alarm and the on-screen instructions.",
+      },
+      {
+        question: "Does my lockdown alarm need to sound different from the fire alarm?",
+        answer: "Yes. The two require opposite actions, so they should use a different tone and, ideally, a different coloured beacon.",
+      },
+    ],
+  },
 ]
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
