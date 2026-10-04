@@ -9,12 +9,14 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 const WP = '/images'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'School & College Safety Systems',
+  title: 'School Lockdown Alarm Systems',
   description:
-    'Lockdown alarms, vape detection, temporary fire alarms and access control for schools and colleges. Planning built around the school day.',
+    'Wireless lockdown alarm systems for UK schools and colleges, distinct from the fire alarm and installed around the school day. Free site survey.',
   canonical: 'https://a-squaredalarms.com/industries/schools',
   keywords: [
     'school lockdown alarm system UK',
+    'lockdown alarms for schools',
+    'school lockdown systems',
     'college vape detection system',
     'school access control installation',
     'PopAlert schools',
@@ -346,13 +348,13 @@ export default function SchoolsIndustryPage() {
             </div>
 
             <h1 className="font-display text-display-2xl font-extrabold leading-[1.03] text-white">
-              Safety Systems for Education Sites Need to Be Clear, Practical, and Built Around Safeguarding.
+              School Lockdown Alarm Systems That Tell Every Classroom What to Do, in Seconds.
             </h1>
 
             <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
-              We help schools and colleges plan the right mix of lockdown alerting, digital messaging,
-              temporary fire alarms, vape detection, access control, and intrusion protection. Every system is
-              specified around how the site works in real life, not around a generic template.
+              Wireless lockdown alarms for primary, secondary and SEN schools, colleges and multi-academy trusts,
+              with a distinct lockdown tone, portable triggers and installation planned around the school day.
+              We also support schools with PopAlert, vape detection, access control and temporary fire alarms.
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row">

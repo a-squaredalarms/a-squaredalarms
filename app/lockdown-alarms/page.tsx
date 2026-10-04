@@ -194,7 +194,11 @@ export default function LockdownAlarmsPage() {
                 Lockdown Alarm Systems That Work When It Matters Most
               </h1>
               <p className="text-lg text-slate-300 leading-relaxed max-w-xl">
-                Designed for UK schools, healthcare sites, and public venues. Full-site lockdown activation in under 3 seconds. Compliant with Martyn's Law.
+                Designed for UK schools, healthcare sites, and public venues. Full-site lockdown activation in under 3 seconds. Built to support Martyn's Law procedures.{' '}
+                <Link href="/industries/schools" className="font-semibold text-sky-300 underline underline-offset-2 hover:text-white">
+                  See our lockdown alarms for schools
+                </Link>
+                .
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <ButtonLink href="#survey" className="btn btn-accent btn-lg">

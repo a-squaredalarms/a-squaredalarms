@@ -719,8 +719,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'install-lockdown-alarm-without-closing-your-site',
-    seoTitle: 'Installing Alarms Without Closing Your Site',
-    seoDescription: 'How to plan an installation around occupied buildings, term dates and exam periods with minimal disruption.',
+    seoTitle: 'Lockdown System Installation Without Closing',
+    seoDescription: 'Lockdown system installation in occupied schools and workplaces: how to plan around term dates, exams and opening hours with minimal disruption.',
     title: 'How to Install a Lockdown Alarm Without Closing Your Site',
     excerpt:
       'Most buildings cannot shut for a week while equipment goes in. Planning around occupancy, term dates and exams is usually what separates a smooth project from a disruptive one.',
@@ -2629,6 +2629,445 @@ export const BLOG_POSTS: BlogPost[] = [
           'The article contrasts PopAlert with more traditional lockdown systems that may require expensive control panels, heavy wiring, specialist servers, complex installations, and large maintenance costs.',
           'It describes PopAlert as a whole-site alert system that removes much of that cost and disruption, making it suitable for schools, academies, colleges, offices, care homes, local authorities, retail locations, and other organisations looking for a practical safety solution.',
         ],
+      },
+    ],
+  },
+  {
+    slug: "temporary-fire-alarm-systems-for-construction-sites",
+    seoTitle: "Temporary Fire Alarms for Construction Sites",
+    seoDescription: "How temporary fire alarm systems protect construction sites: what the rules expect, what a good system includes, and how to plan coverage as the build changes.",
+    title: "Temporary Fire Alarm Systems for Construction Sites: A Practical Guide",
+    excerpt: "A building under construction has no working fire alarm of its own, yet it is full of people, fuel, hot works and changing escape routes. Here is how temporary fire alarm systems fill that gap.",
+    category: "Temporary Fire Alarm Systems",
+    publishedAt: "2026-08-12",
+    displayDate: "12 August 2026",
+    readTime: "7 min read",
+    author: "A-Squared Editorial Team",
+    serviceHref: "/fire-alarms",
+    serviceLabel: "Explore Temporary Fire Alarm Systems",
+    atAGlance: [
+      "Construction sites need a way to raise the alarm long before the permanent fire alarm is commissioned.",
+      "CDM 2015 requires suitable fire detection and alarm arrangements, and HSE guidance HSG168 sets out how.",
+      "Wireless temporary systems use linked call points, detectors and sounder beacons that need no cabling.",
+      "Coverage should be reviewed and moved as floors, stairs and welfare areas change.",
+    ],
+    keyTakeaways: [
+      "Base the system on the site fire risk assessment, not a fixed number of units.",
+      "Make sure the alarm can be heard, and seen, everywhere people work, including outdoors.",
+      "Test regularly, typically weekly, and keep a log alongside the fire plan.",
+    ],
+    sections: [
+      {
+        heading: "Why construction sites need a temporary fire alarm",
+        paragraphs: [
+          "A building under construction is at its most vulnerable before its own fire alarm works. It is full of combustible materials, temporary electrics, hot works and people who may be spread across several floors, scaffolding and compounds at once.",
+          "Shouting, air horns and manual bells rarely reach everyone on a large or noisy site, and they cannot tell the people at the far end of the building what is happening. A linked temporary fire alarm makes sure that when one person raises the alarm, everyone on site hears it at the same time.",
+        ],
+      },
+      {
+        heading: "What the rules expect",
+        paragraphs: [
+          "The Construction (Design and Management) Regulations 2015 require suitable and sufficient fire detection and fire alarm arrangements on construction sites, based on the risks present. The principal contractor is normally responsible for making sure those arrangements are planned, in place and maintained.",
+          "The HSE’s guidance on fire safety in construction, HSG168, explains how to assess fire risk and plan detection, warning and escape on a changing site. Many insurers also expect the industry’s Joint Code of Practice on fire prevention on construction sites to be followed on larger projects.",
+          "None of these documents prescribe a single product. They expect a system that suits the site, is maintained and is understood by everyone working there.",
+        ],
+      },
+      {
+        heading: "What a good temporary system includes",
+        paragraphs: [
+          "A typical wireless temporary fire alarm is built from a small number of device types, linked together so that any one of them can trigger every alarm on site.",
+        ],
+        bullets: [
+          "Manual call points at exits, stair cores and key work areas, so anyone can raise the alarm",
+          "Automatic detectors in higher-risk areas such as welfare cabins, stores and out-of-hours zones",
+          "Weatherproof sounder beacons so the alarm is heard and seen indoors, outdoors and on scaffolding",
+          "Spoken announcements, which help on sites with mixed-language teams",
+          "A wireless mesh link between every unit, with fault reporting if a device loses connection",
+        ],
+      },
+      {
+        heading: "Planning coverage on a site that keeps changing",
+        paragraphs: [
+          "The hardest part of construction fire safety is that the building keeps moving. Escape routes change as stairs go in, floors are enclosed, and welfare cabins are relocated. A fixed, cabled system cannot keep up with that.",
+          "Battery-powered wireless devices can be repositioned as the build progresses. The useful habit is to review the layout every time the fire plan changes: add call points to new escape routes, move sounders as work areas shift, and remove devices from areas that are no longer occupied.",
+        ],
+      },
+      {
+        heading: "Testing, logging and handover",
+        paragraphs: [
+          "A temporary system only protects people if it works and is trusted. Testing is typically carried out weekly, rotating which call point is used, with the results recorded in the site fire log. Faults and low batteries should be dealt with immediately.",
+          "When the permanent fire alarm is commissioned, the temporary system can be removed area by area, so there is never a gap in cover during the handover.",
+        ],
+      },
+    ],
+    comparison: {
+      title: "Temporary fire alarm options on site",
+      columns: [
+        "Wireless linked system",
+        "Standalone bells or air horns",
+      ],
+      rows: [
+        {
+          label: "Everyone alerted at once",
+          cells: [
+            "Yes, every unit sounds",
+            "Only those within earshot",
+          ],
+        },
+        {
+          label: "Automatic detection",
+          cells: [
+            "Available",
+            "No",
+          ],
+        },
+        {
+          label: "Moves with the build",
+          cells: [
+            "Yes, no cabling",
+            "Yes, but coverage is patchy",
+          ],
+        },
+        {
+          label: "Fault reporting",
+          cells: [
+            "Yes",
+            "No",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Is a temporary fire alarm a legal requirement on construction sites?",
+        answer: "CDM 2015 requires suitable fire detection and alarm arrangements based on the site’s risks. On most sites of any size, a linked temporary fire alarm is the practical way to meet that requirement.",
+      },
+      {
+        question: "Who is responsible for the temporary fire alarm?",
+        answer: "Normally the principal contractor, as part of the site fire risk assessment and construction phase plan.",
+      },
+      {
+        question: "Do wireless temporary fire alarms need cabling or mains power?",
+        answer: "No. The devices are battery-powered and link wirelessly, so they can be installed quickly and moved as the site changes.",
+      },
+      {
+        question: "How often should a temporary fire alarm be tested?",
+        answer: "Typically weekly, using a different call point each time, with results recorded in the site fire log.",
+      },
+    ],
+  },
+  {
+    slug: "wireless-vs-wired-fire-alarms-for-changing-buildings",
+    seoTitle: "Wireless vs Wired Fire Alarms",
+    seoDescription: "When a wireless fire alarm makes more sense than a cabled one: refurbishments, temporary buildings, listed buildings and sites that change during works.",
+    title: "Wireless vs Wired Fire Alarms for Buildings That Keep Changing",
+    excerpt: "Cabled fire alarms suit finished buildings that stay the same. Wireless systems come into their own when a building is being built, refurbished or reorganised.",
+    category: "Temporary Fire Alarm Systems",
+    publishedAt: "2026-08-26",
+    displayDate: "26 August 2026",
+    readTime: "6 min read",
+    author: "A-Squared Editorial Team",
+    serviceHref: "/fire-alarms",
+    serviceLabel: "Explore Temporary Fire Alarm Systems",
+    atAGlance: [
+      "Wired systems remain the norm for finished buildings with stable layouts.",
+      "Wireless systems avoid cabling, so they suit construction, refurbishment and historic buildings.",
+      "Battery-powered devices can be added, moved or removed as the building changes.",
+      "The right choice depends on how long the system is needed and how often the layout changes.",
+    ],
+    keyTakeaways: [
+      "Match the system to the building’s stage of life, not just its size.",
+      "Wireless is often the only practical option in occupied or listed buildings under works.",
+      "Whatever the technology, maintenance and testing decide whether it protects people.",
+    ],
+    sections: [
+      {
+        heading: "Two technologies, two jobs",
+        paragraphs: [
+          "A conventional wired fire alarm links detectors, call points and sounders to a control panel through fixed cabling. It is reliable and well understood, and it is the standard choice for finished buildings whose layout will not change for years.",
+          "A wireless fire alarm uses battery-powered devices that communicate by radio. There is no cabling to install, which changes what is practical: the system can go in on day one of a project and move with it.",
+        ],
+      },
+      {
+        heading: "When wireless is the better fit",
+        paragraphs: [
+          "Wireless systems are most useful wherever cabling is slow, disruptive or impossible.",
+        ],
+        bullets: [
+          "Construction sites, before the permanent fire alarm is commissioned",
+          "Refurbishments where the existing system has to be isolated during works",
+          "Occupied schools and offices where cabling would disrupt teaching or work",
+          "Listed and historic buildings where chasing cables through the fabric is not acceptable",
+          "Temporary and modular buildings, welfare cabins and site offices",
+        ],
+      },
+      {
+        heading: "When wired still makes sense",
+        paragraphs: [
+          "For a finished building that will stay as it is, a permanent cabled system designed to the relevant British Standard is usually the long-term answer. Many of our temporary installations exist precisely to protect a building until that permanent system is ready.",
+          "The two are not rivals: a wireless temporary system often covers the gap between the start of works and the handover of the permanent alarm.",
+        ],
+      },
+      {
+        heading: "Questions to ask before choosing",
+        paragraphs: [
+        ],
+        bullets: [
+          "How long will the system be needed: weeks, months or permanently?",
+          "How often will the layout, escape routes or occupied areas change?",
+          "Can cabling be installed without disruption, damage or consent issues?",
+          "Do people need to hear the alarm outdoors or across separate buildings?",
+          "Who will test it, log it and replace batteries?",
+        ],
+      },
+    ],
+    comparison: {
+      title: "Wireless vs wired at a glance",
+      columns: [
+        "Wireless",
+        "Wired",
+      ],
+      rows: [
+        {
+          label: "Installation",
+          cells: [
+            "Hours to days, no cabling",
+            "Days to weeks, cabling required",
+          ],
+        },
+        {
+          label: "Disruption",
+          cells: [
+            "Minimal",
+            "Can be significant in occupied buildings",
+          ],
+        },
+        {
+          label: "Moving devices",
+          cells: [
+            "Simple",
+            "Requires re-cabling",
+          ],
+        },
+        {
+          label: "Best for",
+          cells: [
+            "Sites under works, temporary or historic buildings",
+            "Finished buildings with stable layouts",
+          ],
+        },
+        {
+          label: "Ongoing care",
+          cells: [
+            "Battery checks and regular testing",
+            "Regular testing and servicing",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Are wireless fire alarms reliable?",
+        answer: "Modern wireless systems link devices in a mesh and report any unit that loses connection or has a low battery, so faults are flagged immediately rather than discovered in an emergency.",
+      },
+      {
+        question: "Can a wireless fire alarm be used in a listed building?",
+        answer: "Yes. Because there is no cabling, wireless devices avoid most of the work to historic fabric that a cabled system would need, which is why they are often chosen for listed buildings under works.",
+      },
+      {
+        question: "How long do the batteries last?",
+        answer: "It depends on the device and how often it is used, but long-life batteries in the units we install are rated for around two years.",
+      },
+    ],
+  },
+  {
+    slug: "paxton-net2-vs-paxton10",
+    seoTitle: "Paxton Net2 vs Paxton10",
+    seoDescription: "Paxton Net2 or Paxton10? How the two Paxton access control systems differ, and which suits schools, offices and multi-site organisations.",
+    title: "Paxton Net2 vs Paxton10: Which Access Control System Is Right for Your Building?",
+    excerpt: "Paxton makes two main access control platforms. Both are reliable and widely used, but they suit different buildings and ways of working. Here is how to choose.",
+    category: "Access Control",
+    publishedAt: "2026-09-09",
+    displayDate: "9 September 2026",
+    readTime: "6 min read",
+    author: "A-Squared Editorial Team",
+    serviceHref: "/access-control",
+    serviceLabel: "Explore Paxton Access Control",
+    atAGlance: [
+      "Net2 is Paxton’s long-established access control system, managed through dedicated software.",
+      "Paxton10 combines access control and video management in one browser- and app-based system.",
+      "Both use the same kinds of credentials: cards, fobs and smartphone credentials.",
+      "The right choice depends on your building, your IT setup and whether you want video in the same system.",
+    ],
+    keyTakeaways: [
+      "Choose Net2 for a proven, software-managed system or to extend an existing Net2 site.",
+      "Choose Paxton10 when you want access control and CCTV managed together.",
+      "A site survey of doors, users and IT matters more than the brochure.",
+    ],
+    sections: [
+      {
+        heading: "Two Paxton platforms",
+        paragraphs: [
+          "Paxton is one of the most widely installed access control brands in the UK, and it offers two main systems. Net2 has been the workhorse for many years in schools, offices and commercial buildings. Paxton10 is the newer platform, designed to bring access control and video together in one place.",
+          "Both control who can open which doors and when, both keep a record of every door event, and both let you add or remove users in seconds when someone joins or leaves.",
+        ],
+      },
+      {
+        heading: "Paxton Net2",
+        paragraphs: [
+          "Net2 is managed through dedicated software. Door controllers connect back to that software, and administrators use it to set up users, access levels and schedules, run reports and respond to events.",
+          "Its strengths are maturity and flexibility. It suits single buildings and larger estates alike, works with a wide range of readers, keypads and door hardware, and is the natural choice when you are extending a site that already runs Net2.",
+        ],
+      },
+      {
+        heading: "Paxton10",
+        paragraphs: [
+          "Paxton10 combines access control and video management in a single system that is managed through a web browser or app. Instead of running separate access control and CCTV software, you see door events and the matching camera footage together.",
+          "That makes it attractive for organisations that want simpler day-to-day management, remote administration, and video linked directly to who went where.",
+        ],
+      },
+      {
+        heading: "How to choose",
+        paragraphs: [
+          "In practice the decision usually comes down to a few questions.",
+        ],
+        bullets: [
+          "Do you already have Net2 on site, and do you want to extend it?",
+          "Do you want access control and CCTV in one system?",
+          "Will the system be managed on site, remotely, or across several sites?",
+          "How many doors and users are involved, now and in the next few years?",
+          "Are there doors where wireless locks would avoid disruptive cabling?",
+        ],
+      },
+    ],
+    comparison: {
+      title: "Net2 vs Paxton10",
+      columns: [
+        "Net2",
+        "Paxton10",
+      ],
+      rows: [
+        {
+          label: "What it covers",
+          cells: [
+            "Access control",
+            "Access control and video in one",
+          ],
+        },
+        {
+          label: "Management",
+          cells: [
+            "Dedicated software",
+            "Web browser and app",
+          ],
+        },
+        {
+          label: "Best for",
+          cells: [
+            "Proven deployments and extending existing Net2 sites",
+            "Sites wanting doors and cameras managed together",
+          ],
+        },
+        {
+          label: "Credentials",
+          cells: [
+            "Cards, fobs, keypads, smartphone",
+            "Cards, fobs, keypads, smartphone",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Can Net2 and Paxton10 be mixed on the same site?",
+        answer: "They are separate platforms, so most sites standardise on one. If you already run Net2, extending it is usually simplest; a move to Paxton10 is best planned as a deliberate upgrade.",
+      },
+      {
+        question: "Can Paxton access control work with existing doors?",
+        answer: "Usually, yes. Readers and locks are fitted to existing doors, and wireless door handles can be used where running cables would be difficult or disruptive.",
+      },
+      {
+        question: "Is Paxton suitable for schools?",
+        answer: "Yes. Schools commonly use Paxton to control reception, staff areas and external gates, and to remove a lost card or a leaver’s access instantly.",
+      },
+    ],
+  },
+  {
+    slug: "how-do-vape-detectors-work",
+    seoTitle: "How Do Vape Detectors Work?",
+    seoDescription: "How vape detectors sense vaping in school toilets and changing rooms, how staff are alerted, where to install them and how privacy is protected.",
+    title: "How Do Vape Detectors Work? A Plain-English Guide for Schools",
+    excerpt: "Vape detectors are now common in school toilets and changing rooms. Here is what they actually detect, how staff are alerted, and how to install them without creating privacy concerns.",
+    category: "Vape Detection",
+    publishedAt: "2026-09-23",
+    displayDate: "23 September 2026",
+    readTime: "5 min read",
+    author: "A-Squared Editorial Team",
+    serviceHref: "/vape-detection",
+    serviceLabel: "Explore Vape Detection",
+    atAGlance: [
+      "Vape detectors sense the vapour particles and chemical changes that vaping releases into the air.",
+      "Staff receive an instant alert on their phone or computer, rather than a loud alarm in the room.",
+      "They contain no cameras, so they can be fitted in toilets and changing rooms.",
+      "Placement and settings matter as much as the device itself.",
+    ],
+    keyTakeaways: [
+      "A vape detector is not a smoke alarm; it is designed to sense vaping specifically.",
+      "Silent alerts to staff are more effective than sounding an alarm in the room.",
+      "Tell pupils and parents the detectors are there; deterrence is half the value.",
+    ],
+    sections: [
+      {
+        heading: "What a vape detector actually senses",
+        paragraphs: [
+          "When someone vapes, they release a dense cloud of tiny aerosol particles and chemical compounds into the air. A vape detector continuously samples the air and looks for the particular pattern that vaping creates, which is different from normal air, steam or dust.",
+          "Unlike a smoke alarm, it is designed to recognise vaping specifically and to report it quietly, rather than to trigger an evacuation.",
+        ],
+      },
+      {
+        heading: "How staff are alerted",
+        paragraphs: [
+          "Most systems send an instant notification to nominated staff, typically by app, email or text, saying which detector has been triggered and when. That lets a member of staff respond to the right toilet block quickly, without alerting the person vaping.",
+          "Many detectors also report tampering, such as a device being covered or knocked, and some can flag unusually loud noise, which can help staff respond to bullying or fights in unsupervised spaces.",
+        ],
+      },
+      {
+        heading: "Privacy",
+        paragraphs: [
+          "Vape detectors contain no cameras and do not record conversations, which is why they can be used in toilets and changing rooms where cameras never could. Schools should still explain where detectors are, what they do and how alerts are used, in their behaviour and privacy policies.",
+        ],
+      },
+      {
+        heading: "Where to install them",
+        paragraphs: [
+          "Placement is the difference between a detector that works and one that is ignored.",
+        ],
+        bullets: [
+          "Toilet blocks, positioned so cubicles are covered without being directly above showers or hand dryers",
+          "Changing rooms, away from steam sources",
+          "Other unsupervised spaces where vaping is reported, such as stairwells",
+          "On the ceiling, out of reach, so tampering is harder and triggers an alert",
+        ],
+      },
+      {
+        heading: "Making them effective",
+        paragraphs: [
+          "Detectors work best as part of a wider approach: clear rules, a consistent response when an alert comes in, and communication with pupils and parents. Many schools find that simply letting pupils know detectors are installed reduces vaping in those areas.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Will a vape detector go off with deodorant or steam?",
+        answer: "Good detectors are designed to tell vaping apart from everyday aerosols and steam, but placement still matters. Keeping them away from showers and hand dryers reduces false alerts.",
+      },
+      {
+        question: "Do vape detectors have cameras or microphones?",
+        answer: "They contain no cameras and do not record conversations. Some models measure noise levels to flag possible incidents, without recording what is said.",
+      },
+      {
+        question: "Does the alarm sound in the toilet?",
+        answer: "Usually not. Alerts go silently to staff so they can respond, which is more effective than warning the person vaping.",
       },
     ],
   },
