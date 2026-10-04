@@ -4,8 +4,8 @@ import { BRAND, LOCAL_BUSINESS_SCHEMA } from '@/lib/data'
 
 // ─── Base Metadata ────────────────────────────────────────────────────────────
 
-const BASE_URL = 'https://a-squaredalarms.com'
-const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-default.jpg`
+export const BASE_URL = 'https://a-squaredalarms.com'
+export const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-default.jpg`
 
 /**
  * Trims a description to the length Google will actually display (~155 chars),
@@ -102,6 +102,8 @@ export function buildLocalBusinessSchema(override?: Partial<LocalBusinessSchema>
     '@id': `${BASE_URL}/#business`,
     name: data.name,
     url: data.url,
+    image: [DEFAULT_OG_IMAGE, `${BASE_URL}/logo-dark.webp`],
+    logo: `${BASE_URL}/logo-dark.webp`,
     telephone: data.telephone,
     email: data.email,
     address: {
@@ -140,6 +142,7 @@ export function buildServiceSchema(service: ServiceSchema): string {
     description: service.description,
     provider: {
       '@type': 'LocalBusiness',
+      '@id': `${BASE_URL}/#business`,
       name: service.provider,
       url: BASE_URL,
     },
@@ -152,14 +155,24 @@ export function buildServiceSchema(service: ServiceSchema): string {
   })
 }
 
+/**
+ * A location page describes the area the business serves, not a separate branch, so it is a
+ * Service provided by the main LocalBusiness (linked by @id) rather than a second business.
+ */
 export function buildLocationSchema(location: LocationPage): string {
   return JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: `A-Squared Alarms — ${location.city}`,
+    '@type': 'Service',
+    name: `Lockdown alarms and safety systems in ${location.city}`,
+    serviceType: 'Lockdown alarm, fire alarm and security system installation',
     url: `${BASE_URL}/locations/${location.slug}`,
-    telephone: BRAND.phone,
-    email: BRAND.email,
+    provider: {
+      '@type': 'LocalBusiness',
+      '@id': `${BASE_URL}/#business`,
+      name: BRAND.name,
+      url: BASE_URL,
+      telephone: BRAND.phone,
+    },
     areaServed: {
       '@type': 'City',
       name: location.city,
@@ -167,11 +180,11 @@ export function buildLocationSchema(location: LocationPage): string {
         '@type': 'AdministrativeArea',
         name: location.region,
       },
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: location.coordinates.lat,
-      longitude: location.coordinates.lng,
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: location.coordinates.lat,
+        longitude: location.coordinates.lng,
+      },
     },
   })
 }

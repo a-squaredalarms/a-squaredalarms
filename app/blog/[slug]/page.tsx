@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, clampDescription } from '@/lib/seo'
+import { BASE_URL, buildMetadata, buildFAQSchema, buildBreadcrumbSchema, clampDescription } from '@/lib/seo'
 import { BLOG_POSTS, getBlogPostBySlug, getRelatedBlogPosts } from '@/lib/blog'
 import { CTASection } from '@/components/sections/CTASection'
 import { SoundLibrary } from '@/components/sections/SoundLibrary'
@@ -27,7 +27,7 @@ export async function generateMetadata({
     title: post.seoTitle ?? post.title,
     description: clampDescription(post.seoDescription ?? post.excerpt),
     canonical: `https://a-squaredalarms.com/blog/${post.slug}`,
-    ...(post.image ? { ogImage: post.image.src } : {}),
+    ogImage: post.image?.src ?? `${BASE_URL}/images/blog/${post.slug}.jpg`,
     keywords: [
       post.category,
       `${post.category} guidance`,
@@ -77,7 +77,7 @@ export default async function BlogPostPage({
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
     mainEntityOfPage: `https://a-squaredalarms.com/blog/${post.slug}`,
-    ...(post.image ? { image: [post.image.src] } : {}),
+    image: [post.image?.src ?? `${BASE_URL}/images/blog/${post.slug}.jpg`],
     author: {
       '@type': 'Organization',
       name: post.author,

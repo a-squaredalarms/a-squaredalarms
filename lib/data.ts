@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
     slug: 'lockdown-alarms',
     tagline: "Martyn's Law Ready",
     description:
-      "Engineered for immediate threat response. Our lockdown systems deliver full-site alerting in under 3 seconds — purpose-built for schools, offices, healthcare, and public venues.",
+      "Engineered for immediate threat response. Our lockdown systems sound a distinct alert across the whole site within seconds — purpose-built for schools, offices, healthcare, and public venues.",
     icon: 'shield-alert',
     href: '/lockdown-alarms',
     primaryCTA: 'Get a Site Survey',

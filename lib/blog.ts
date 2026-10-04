@@ -2578,10 +2578,6 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Introducing PopAlert',
     excerpt:
       'PopAlert is a modern lockdown and alert system that delivers instant full-screen notifications across a site, giving staff a fast and clear way to communicate during critical incidents.',
-    image: {
-      src: 'https://a-squaredalarms.com/wp-content/uploads/2026/02/Asset-57-1024x403.webp',
-      alt: 'Introducing PopAlert visual from the original article',
-    },
     category: 'PopAlert',
     publishedAt: '2026-02-18',
     displayDate: '18 February 2026',
