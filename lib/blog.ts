@@ -3003,8 +3003,8 @@ export const BLOG_POSTS: BlogPost[] = [
     displayDate: "23 September 2026",
     readTime: "5 min read",
     author: "A-Squared Editorial Team",
-    serviceHref: "/vape-detection",
-    serviceLabel: "Explore Vape Detection",
+    serviceHref: "/contact",
+    serviceLabel: "Ask About Vape Detection",
     atAGlance: [
       "Vape detectors sense the vapour particles and chemical changes that vaping releases into the air.",
       "Staff receive an instant alert on their phone or computer, rather than a loud alarm in the room.",
