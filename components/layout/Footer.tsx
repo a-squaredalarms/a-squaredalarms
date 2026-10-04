@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { BRAND, SERVICES, INDUSTRIES, LOCATIONS } from '@/lib/data'
+import { CookieSettingsLink } from '@/components/layout/CookieConsent'
 
 const FOOTER_LINKS = {
   services: SERVICES
@@ -196,6 +197,7 @@ export function Footer() {
                 {link.label}
               </Link>
             ))}
+            <CookieSettingsLink className="hover:text-white transition-colors" />
           </div>
         </div>
       </div>

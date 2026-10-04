@@ -4,6 +4,7 @@ import { GeistMono } from 'geist/font/mono'
 import { Bricolage_Grotesque } from 'next/font/google'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { CookieConsent } from '@/components/layout/CookieConsent'
 import { buildLocalBusinessSchema, buildOrganizationSchema } from '@/lib/seo'
 import './globals.css'
 
@@ -87,6 +88,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   )

@@ -201,9 +201,10 @@ export default function CookiesPage() {
                   embedded features.
                 </p>
                 <p>
-                  Based on the current public website implementation, we do not appear to be using a
-                  dedicated analytics or advertising package directly in the site code at this time.
-                  If that changes, this policy should be updated accordingly.
+                  With your permission, we use Google Analytics to understand how visitors find and use
+                  the site, such as which pages are viewed and how people arrive. These cookies are only
+                  set if you click Accept on our cookie banner, and you can change your choice at any time
+                  using the Cookie settings link at the bottom of every page.
                 </p>
               </CookieSection>
 
@@ -230,9 +231,10 @@ export default function CookiesPage() {
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                     <p className="font-semibold text-navy-900">Performance or analytics cookies</p>
                     <p className="mt-2 text-sm text-slate-700">
-                      We do not currently identify a dedicated analytics package actively deployed in
-                      the site code. If analytics are added in future, this section should be updated
-                      to explain what is used and why.
+                      We use Google Analytics 4, provided by Google, only if you accept analytics
+                      cookies. It sets cookies named _ga and _ga_&lt;ID&gt;, which typically last up to
+                      two years, to distinguish visitors and sessions. IP addresses are anonymised. If
+                      you reject or later withdraw consent, these cookies are not set or are removed.
                     </p>
                   </div>
 
